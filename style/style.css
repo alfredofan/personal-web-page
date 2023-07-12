@@ -1,0 +1,66 @@
+* {
+
+
+}
+/* Variable declarations */
+
+:root {
+    --blue: #6495ed;
+    --white: #faf0e6;
+}
+
+
+.container {
+--fontsize: 25px;
+}
+
+/* Styles */
+
+body {
+    background-color: var(--blue);
+}
+
+h2 {
+    border-bottom: 2px solid var(--blue);
+}
+
+.container {
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 15px;
+}
+
+button {
+    background-color: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 5px;
+}
+
+.container {
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 15px;
+    font-size: var(--fontsize);
+}
+
+.footer {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 10px;
+  }
+
+/* Responsive layout - makes the three columns stack on 
+top of each other instead of next to each other on smaller 
+screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+@media screen and (min-width: 450px) {
+    .container {
+        --fontsize: 50px;
+    }
+}
