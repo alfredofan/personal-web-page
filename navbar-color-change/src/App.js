@@ -6,7 +6,12 @@ function App() {
 		<Fragment>
 			<Navbar />
 			<div style={{ overflowY: "scroll", height: "800px" }}>
-        <h1> I make websites </h1>
+         <br></br>
+         <br></br>
+
+         <p>Hi, my name is</p>
+         <h1>Alfredo Faustino<br></br>
+          I build things for the web.</h1>
 
       </div>
 		</Fragment>

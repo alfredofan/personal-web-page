@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
+
 import {
   Nav,
   NavContainer,
@@ -51,8 +52,12 @@ const Navbar = () => {
     <Fragment>
       <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
         <NavContainer>
-          <NavLogo href="#">AFaustino</NavLogo>
+ <div >
+      <NavLogo href="#">
+          {/* AFaustino */}
+      </NavLogo>
 
+      </div>
           <MobileIcon onClick={toggleSidenav}>
             <div className="container">
               <div className="bar1"></div>
@@ -85,7 +90,9 @@ const Navbar = () => {
             ×
           </a>
           <SidenavContainer>
-            <SidenavLogo href="#">AFaustino</SidenavLogo>
+            <SidenavLogo href="#">
+              {/* AFaustino */}
+              </SidenavLogo>
             <MobileIcon onClick={closeSidenav}>
               <div className="container">
                 <div className="bar1"></div>

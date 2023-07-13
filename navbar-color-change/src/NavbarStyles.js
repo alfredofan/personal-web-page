@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import logoImage from './img/personal_logo_black.png';
+import logoImageSide from './img/personal_logo_white.png';
+
 
 export const Nav = styled.nav`
   background: transparent;
@@ -30,15 +33,27 @@ export const NavContainer = styled.div`
 
 
 export const NavLogo = styled.a`
-  color: Blue;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 2.0rem;
-  display: flex;
-  align-items: center;
-  margin-left: 44px;
-  font-weight: bold;
-  text-decoration: none;
+//   color: Blue;
+//  justify-self: flex-start;
+//   cursor: pointer;
+//   font-size: 2.0rem;
+//   display: flex;
+//  align-items: center;
+   margin-left: 24px;
+//   font-weight: bold;
+//   text-decoration: none;
+
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 47.5px; 
+
+  background-image: url(${logoImage});
+  background-repeat: no-repeat;
+  background-size: contain; 
+  height: 35px;
+  width: 100%;
+  padding-left: 30px; // Adjust the padding as needed
 `;
 
 
@@ -132,22 +147,31 @@ export const SidenavContainer = styled.div`
   padding: 0px;
 `;
 
+
 export const SidenavLogo = styled.a`
+//   color: Blue;
+//  justify-self: flex-start;
+//   cursor: pointer;
+//   font-size: 2.0rem;
+//   display: flex;
+//  align-items: center;
+   margin-left: 24px;
+//   font-weight: bold;
+//   text-decoration: none;
+
   display: block;
   position: absolute;
-  top: 10px;
-  left: 24px;
-  align-items: center;  
+  top: 15px;
+  left: 47.5px; 
 
-  color: Blue;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 2.0rem;
-  margin-left: 44px;
-  font-weight: bold;
-  text-decoration: none;
-
+  background-image: url(${logoImageSide});
+  background-repeat: no-repeat;
+  background-size: contain; 
+  height: 35px;
+  width: 100%;
+  padding-left: 30px; // Adjust the padding as needed
 `;
+
 
 
 export const SidenavItem = styled.li`
