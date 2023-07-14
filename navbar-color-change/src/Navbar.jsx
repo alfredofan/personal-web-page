@@ -52,12 +52,11 @@ const Navbar = () => {
     <Fragment>
       <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
         <NavContainer>
- <div >
+          <div>
       <NavLogo href="#">
           {/* AFaustino */}
       </NavLogo>
-
-      </div>
+          </div>
           <MobileIcon onClick={toggleSidenav}>
             <div className="container">
               <div className="bar1"></div>
@@ -84,12 +83,10 @@ const Navbar = () => {
             </NavItem>
           </NavMenu>
         </NavContainer>
+        </Nav>
 
         <Sidenav isOpen={isSidenavOpen}>
-          <a href="javascript:void(0)" className="closebtn" onClick={closeSidenav}>
-            ×
-          </a>
-          <SidenavContainer>
+         
             <SidenavLogo href="#">
               {/* AFaustino */}
               </SidenavLogo>
@@ -100,7 +97,6 @@ const Navbar = () => {
                 <div className="bar3"></div>
               </div>
             </MobileIcon>
-          </SidenavContainer>
 
           <SidenavItem>
             <SidenavLinks href="#">About</SidenavLinks>
@@ -118,7 +114,7 @@ const Navbar = () => {
             <SidenavLinks href="#">Sign In</SidenavLinks>
           </SidenavItem>
         </Sidenav>
-      </Nav>
+
       {isOverlayOpen && <Overlay onClick={closeOverlay, closeSidenav} />}
     </Fragment>
   );

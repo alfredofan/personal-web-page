@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   /* Fix your navbar by using above two lines of code */
-  z-index: 10;
+  z-index: 1;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -25,7 +25,7 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: 80px;
-  z-index: 1;
+  z-index: inherit;
   width: 100%;
   padding: 0 24px;
   max-width: 1100px;
@@ -39,13 +39,13 @@ export const NavLogo = styled.a`
 //   font-size: 2.0rem;
 //   display: flex;
 //  align-items: center;
-   margin-left: 24px;
+   margin-left: 44px;
 //   font-weight: bold;
 //   text-decoration: none;
 
   display: block;
-  position: absolute;
-  top: 15px;
+  position: ;
+  top: 30px;
   left: 47.5px; 
 
   background-image: url(${logoImage});
@@ -54,6 +54,7 @@ export const NavLogo = styled.a`
   height: 35px;
   width: 100%;
   padding-left: 30px; // Adjust the padding as needed
+  margin-top: 25px;
 `;
 
 
@@ -112,7 +113,7 @@ export const NavLinks = styled.a`
 export const Sidenav = styled.div`
   width: ${({ isOpen }) => (isOpen ? '250px' : '0')};
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   height: 100%;
   top: 0;
   left: 0;
@@ -130,7 +131,7 @@ export const OpenButton = styled.button`
   padding: 10px 15px;
   border: none;
   &:hover {
-    background-color: #444;
+  background-color: #444;
   }
 `;
 
@@ -139,9 +140,10 @@ export const SidenavContainer = styled.div`
   display: flex;
   justify-self: center;
   align-self: center;
+  z-index: inherit;
+
   
   height: 60px;
-  z-index: 1;
   width: 100%;
   min-width:fit-content;
   padding: 0px;
@@ -161,6 +163,7 @@ export const SidenavLogo = styled.a`
 
   display: block;
   position: absolute;
+  z-index: inherit;
   top: 15px;
   left: 47.5px; 
 
@@ -176,6 +179,8 @@ export const SidenavLogo = styled.a`
 
 export const SidenavItem = styled.li`
   height: 50px;
+  z-index: inherit;
+
 `;
 
 export const SidenavLinks = styled.a`
@@ -189,16 +194,18 @@ export const SidenavLinks = styled.a`
   cursor: pointer;
   width:100%;
   &.active {
-    color: #000000;
+  color: #000000;
+  z-index: inherit;
+
   }
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled.a`
   height: 100%;
   width: 100%;
   display: block;
   position: fixed;
-  z-index: 11;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
