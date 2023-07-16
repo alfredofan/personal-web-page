@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-https://alfredofan.github.io/personal-web-page/navbar-color-change/
+https://alfredofan.github.io/personal-web-page/navbar-color-change/index.js
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
