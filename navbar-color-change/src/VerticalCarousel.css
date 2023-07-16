@@ -1,0 +1,132 @@
+
+  
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  
+  @media screen and (min-aspect-ratio: 16/9) {
+   
+    
+  }
+  .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    background-color: #f5f5f5;
+    position: relative;
+    object-fit:cover; /*not streach image  */ 
+
+  }
+  
+
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit:cover; /*not streach image  */ 
+    
+  }
+
+  .carousel-container {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  
+/* The primary configuration is set for mobile (vertical display) 
+and the below for monitors and widescreen display 
+This configuration is for resposiveness
+*/
+@media screen and (min-aspect-ratio: 4/3) {
+
+    .carousel-item img {
+        width: 100% !important; 
+      }
+
+      .carousel-item {
+        width: 100%;
+      }
+}
+
+
+
+  .carousel-caption {
+    align-items: start;
+    position: absolute;
+    text-align: left;
+    color: #000000;
+    padding: 20px;
+    /*background-color: rgba(0, 0, 0, 0.7); */
+  }
+  
+  .carousel-caption h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-caption p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-caption button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+
+  .carousel .slider-wrapper {
+    flex-grow: 1;
+  }
+  
+  .carousel .slider-wrapper.axis-vertical .slider {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carousel .slider-wrapper.axis-vertical .slider .slide {
+    height: 100vh;
+  }
+  
+  .carousel .slider-wrapper.axis-vertical .slider .slide img {
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+  }
+  
+  .carousel .control-dots {
+    position: absolute;
+    left: 0;
+    top: 80%;
+    transform: translateY(70%);
+    transform: translateX(5%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .carousel .control-dots .dot {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel .control-dots .dot.selected {
+    background-color: #000;
+  }
+  

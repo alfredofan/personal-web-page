@@ -1,21 +1,35 @@
 // App.js
+
 import React, { Fragment } from 'react';
 import Navbar from './Navbar';
+import VerticalCarousel from './VerticalCarousel';
+import Footer from './Footer';
+import { FullContainer } from './Containers';
+
 function App() {
-	return (
-		<Fragment>
-			<Navbar />
-			<div style={{ overflowY: "scroll", height: "800px" }}>
-         <br></br>
-         <br></br>
+  return (
+    <Fragment>
+      <Navbar />
+      <VerticalCarousel />
+      <FullContainer>
+        <section>
+          <br />
+          <p className="font-small" style={{ marginBottom: '0px' }}>
+            Hi, my name is
+          </p>
+          <h1 className="font-large" style={{ fontWeight: 'bold', marginTop: '0px' }}>
+            Alfredo Faustino
+          </h1>
 
-         <p>Hi, my name is</p>
-         <h1>Alfredo Faustino<br></br>
-          I build things for the web.</h1>
-
-      </div>
-		</Fragment>
-	);
+          <h2 className="font-medium">I build things for the web.</h2>
+          <p className="font-small">
+            As a web developer, I bring your ideas to life by building innovative and captivating online solutions.
+          </p>
+        </section>
+      </FullContainer>
+      <Footer/>
+    </Fragment>
+  );
 }
 
 export default App;

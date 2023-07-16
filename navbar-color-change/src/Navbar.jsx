@@ -92,9 +92,9 @@ const Navbar = () => {
               </SidenavLogo>
             <MobileIcon onClick={closeSidenav}>
               <div className="container">
-                <div className="bar1"></div>
-                <div className="bar2"></div>
-                <div className="bar3"></div>
+                <div className="bar01"></div>
+                <div className="bar02"></div>
+                <div className="bar03"></div>
               </div>
             </MobileIcon>
 

@@ -12,6 +12,31 @@ code {
     monospace;
 }
 
+
+body{
+  overflow: hidden;
+  /* height: 120vh; */
+}
+
+/* 
+===============================
+            Fonts
+===============================
+*/
+
+.font-large{
+  font-size: clamp(33px, 4vw, 75px);
+}
+
+.font-medium{
+  font-size: clamp(22px, 2.5vw, 33px);
+}
+
+.font-small{
+  font-size: clamp(12px, 1.25vw, 15px);
+}
+
+
 /* 
 ===============================
             Navbar
@@ -23,7 +48,7 @@ code {
 }
 
 .navbar.colorChange {
-	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.3);  /* youtube color #818181;*/
 }
 
 
@@ -38,13 +63,21 @@ code {
 
 }
 
+/* Nav */
 .bar1, .bar2, .bar3 {
   width: 25px;
   height: 2px;
-  background-color:  #818181;
-  
+  background-color:  #000000;  /* youtube color #818181;*/
   margin: 6px 0;
   transition: 0.4s;
 }
 
+/* Sidenav */
+.bar01, .bar02, .bar03 {
+  width: 25px;
+  height: 2px;
+  background-color:  #ffffff;  /* youtube color #818181;*/
+  margin: 6px 0;
+  transition: 0.4s;
+}
 

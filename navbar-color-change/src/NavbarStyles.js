@@ -3,6 +3,10 @@ import logoImage from './img/personal_logo_black.png';
 import logoImageSide from './img/personal_logo_white.png';
 
 
+const navLinksColor = '#808080'; // Change the color value as needed
+const navLinksAvtiveColor = '#000000'; // Change the color value as needed
+
+
 export const Nav = styled.nav`
   background: transparent;
   height: 60px;
@@ -10,10 +14,11 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  /* Fix your navbar by using below two lines of code */
-  position: sticky;
+  width:100%;
+  /* Fix navbar by using below two lines of code */
+  position: fixed;
   top: 0;
-  /* Fix your navbar by using above two lines of code */
+  /* Fix navbar by using above two lines of code */
   z-index: 1;
 
   @media screen and (max-width: 960px) {
@@ -93,7 +98,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled.a`
-  color: #808080;
+  color: ${navLinksColor};
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -102,7 +107,7 @@ export const NavLinks = styled.a`
   cursor: pointer;
 
   &.active {
-    color: #000000;
+    color: ${navLinksAvtiveColor};
   }
 `;
 
@@ -184,7 +189,7 @@ export const SidenavItem = styled.li`
 `;
 
 export const SidenavLinks = styled.a`
-  color: #808080;
+  color: ${navLinksColor};
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -194,7 +199,7 @@ export const SidenavLinks = styled.a`
   cursor: pointer;
   width:100%;
   &.active {
-  color: #000000;
+  color: ${navLinksColor};
   z-index: inherit;
 
   }
