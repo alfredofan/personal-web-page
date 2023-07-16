@@ -1,16 +1,26 @@
 import styled from 'styled-components';
+import logoLinkedin from './img/Social Media/icons8-linkedin-64_clean.png';
+
+
+
+//const Color = '#808080'; // Change the color value as needed
+//const Color2 = '#000000'; // Change the color value as needed
+//color: ${navLinksAvtiveColor};
+
+
 
 export const FooterContainer = styled.footer`
-
-  
   background: transparent;
   padding: 20px;
-`;
+  z-index: 10;
 
+`;
 
 export const StickyFooterContainer = styled.footer`
 
   position: absolute;
+  display:flex;
+  justify-content: space-around;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -47,22 +57,26 @@ export const SocialMediaLink = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: #333;
+  width: 30px;
+  height: 30px;
+  background: transparent;
   color: #fff;
   margin: 0 10px;
-  border-radius: 50%;
-  text-decoration: none;
+  // border-radius: 50%; //Roud effect
+  // text-decoration: none;
   transition: background 0.3s ease;
+  background-image: url(${logoLinkedin});
+  background-repeat: no-repeat;
+  background-size: contain; 
 
   &:hover {
-    background: #555;
+    opacity: 0.5;
   }
 `;
 
 export const Copyright = styled.p`
   text-align: center;
   font-size: 14px;
-  color: #666;
+  font-weight: 500;
+  color: #000;
 `;

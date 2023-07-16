@@ -3,8 +3,11 @@ import logoImage from './img/personal_logo_black.png';
 import logoImageSide from './img/personal_logo_white.png';
 
 
-const navLinksColor = '#808080'; // Change the color value as needed
-const navLinksAvtiveColor = '#000000'; // Change the color value as needed
+const navLinksColor = '#000'; // Change the color value as needed
+const navLinksHoverColor = '#808080'; // Change the color value as needed
+
+const sidenavLinksColor = '#fff'; // Change the color value as needed
+const sidenavLinksHoverColor = '#808080'; // Change the color value as needed
 
 
 export const Nav = styled.nav`
@@ -60,10 +63,14 @@ export const NavLogo = styled.a`
   width: 100%;
   padding-left: 30px; // Adjust the padding as needed
   margin-top: 25px;
+
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 
-export const MobileIcon = styled.div`
+export const MobileIcon = styled.div` // Hamburger menu
   display: none;
 
   @media screen and (max-width: 960px) {
@@ -78,6 +85,10 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+  }
+
+  &:hover {
+    opacity: 0.5;
   }
 `;
 
@@ -106,8 +117,8 @@ export const NavLinks = styled.a`
   height: 100%;
   cursor: pointer;
 
-  &.active {
-    color: ${navLinksAvtiveColor};
+  &:hover {
+    color: ${navLinksHoverColor};
   }
 `;
 
@@ -138,6 +149,7 @@ export const OpenButton = styled.button`
   &:hover {
   background-color: #444;
   }
+  
 `;
 
 
@@ -152,6 +164,8 @@ export const SidenavContainer = styled.div`
   width: 100%;
   min-width:fit-content;
   padding: 0px;
+
+  
 `;
 
 
@@ -178,6 +192,11 @@ export const SidenavLogo = styled.a`
   height: 35px;
   width: 100%;
   padding-left: 30px; // Adjust the padding as needed
+
+  &:hover {
+    opacity: 0.5;
+  }
+
 `;
 
 
@@ -185,11 +204,11 @@ export const SidenavLogo = styled.a`
 export const SidenavItem = styled.li`
   height: 50px;
   z-index: inherit;
-
+  list-style-type: none; /* this line is to hide the list marker */
 `;
 
 export const SidenavLinks = styled.a`
-  color: ${navLinksColor};
+  color: ${sidenavLinksColor};
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -198,10 +217,10 @@ export const SidenavLinks = styled.a`
   height: 100%;
   cursor: pointer;
   width:100%;
-  &.active {
-  color: ${navLinksColor};
   z-index: inherit;
 
+  &:hover {
+    color: ${sidenavLinksHoverColor};
   }
 `;
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import { FooterContainer, StickyFooterContainer,FooterNav, NavLink, SocialMediaContainer, SocialMediaLink, Copyright }
-  from './FooterStyles';
+import { FooterContainer, FooterNav, NavLink, SocialMediaContainer, SocialMediaLink, Copyright } from '../FooterStyles';
 
 const Footer = () => {
   return (
@@ -26,7 +25,7 @@ const Footer = () => {
         </SocialMediaLink>
       </SocialMediaContainer>
       <Copyright>
-        &copy; {new Date().getFullYear()} Alfredo Faustino. All rights reserved.
+        &copy; {new Date().getFullYear()} Your Website. All rights reserved.
       </Copyright>
     </FooterContainer>
   );

@@ -14,17 +14,7 @@ function App() {
       <FullContainer>
         <section>
           <br />
-          <p className="font-small" style={{ marginBottom: '0px' }}>
-            Hi, my name is
-          </p>
-          <h1 className="font-large" style={{ fontWeight: 'bold', marginTop: '0px' }}>
-            Alfredo Faustino
-          </h1>
-
-          <h2 className="font-medium">I build things for the web.</h2>
-          <p className="font-small">
-            As a web developer, I bring your ideas to life by building innovative and captivating online solutions.
-          </p>
+       
         </section>
       </FullContainer>
       <CarouselFooter/>

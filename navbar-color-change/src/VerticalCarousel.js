@@ -52,14 +52,10 @@ const VerticalCarousel = () => {
             
         <p className="font-small" style={{ marginBottom: "0px" }}>
           Hi, my name is</p>
-          <h1 className="font-large" style={{ fontWeight: "bold", marginTop: "0px" }}>
+          <h2 className="font-large" style={{ fontWeight: "bold", margin: "0px" }}>
           Alfredo Faustino
-          </h1>
-
-
-
-
-          <h2 className="font-medium">
+          </h2>
+          <h2 className="font-medium" style={{ marginTop: "0px" }}>
           I build things for the web.
             </h2>
           <p className="font-small">
