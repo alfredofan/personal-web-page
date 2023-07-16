@@ -2,15 +2,10 @@ import React from 'react';
 import { FooterContainer, StickyFooterContainer,FooterNav, NavLink, SocialMediaContainer, SocialMediaLink, Copyright }
   from './FooterStyles';
 
-const Footer = () => {
+const CarouselFooter = () => {
   return (
-    <FooterContainer>
-      <FooterNav>
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">About</NavLink>
-        <NavLink href="#">Services</NavLink>
-        <NavLink href="#">Contact</NavLink>
-      </FooterNav>
+    <StickyFooterContainer>
+      
       <SocialMediaContainer>
         <SocialMediaLink href="#">
           <i className="fab fa-facebook-f"></i>
@@ -28,8 +23,8 @@ const Footer = () => {
       <Copyright>
         &copy; {new Date().getFullYear()} Alfredo Faustino. All rights reserved.
       </Copyright>
-    </FooterContainer>
+    </StickyFooterContainer>
   );
 };
 
-export default Footer;
+export default CarouselFooter;

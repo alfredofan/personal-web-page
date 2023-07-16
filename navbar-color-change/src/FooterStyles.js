@@ -2,6 +2,14 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
 
+  
+  background: transparent;
+  padding: 20px;
+`;
+
+
+export const StickyFooterContainer = styled.footer`
+
   position: absolute;
   bottom: 0;
   left: 0;

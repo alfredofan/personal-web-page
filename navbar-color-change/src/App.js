@@ -3,7 +3,7 @@
 import React, { Fragment } from 'react';
 import Navbar from './Navbar';
 import VerticalCarousel from './VerticalCarousel';
-import Footer from './Footer';
+import CarouselFooter from './CarouselFooter';
 import { FullContainer } from './Containers';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           </p>
         </section>
       </FullContainer>
-      <Footer/>
+      <CarouselFooter/>
     </Fragment>
   );
 }
