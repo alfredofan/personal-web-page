@@ -69,11 +69,17 @@ This configuration is for resposiveness
 
 
   .carousel-caption {
+    margin-left: 20px; /* compensate the position ajustment to get carousel image wider then screen */
+
+    margin-bottom: 150px;  /* position the caption a bit above the center of screen */
+   
+
     align-items: start;
     position: absolute;
     text-align: left;
     color: #000000;
     padding: 20px;
+    max-width: 600px;
     /*background-color: rgba(0, 0, 0, 0.7); */
   }
   

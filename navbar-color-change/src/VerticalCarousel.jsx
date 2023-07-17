@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './VerticalCarousel.css'; // CSS custom styling
-import CarouselImage1 from './img/carousel/luigi-pozzoli-Db8xEYwtdWw-unsplash.jpg';
+import CarouselImage1 from './img/carousel/luigi-pozzoli-Db8xEYwtdWw-unsplash-2.jpg';
 import CarouselImage2 from './img/carousel/ty-feague-gnDbEnWFMWs-unsplash.jpg';
 import CarouselImage3 from './img/carousel/taylor-leopold-COE-CIGj8VA-unsplash.jpg';
 

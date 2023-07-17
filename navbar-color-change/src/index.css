@@ -24,6 +24,10 @@ body{
 ===============================
 */
 
+.font-x-large{
+  font-size: clamp(45px, 6vw, 95px);
+}
+
 .font-large{
   font-size: clamp(33px, 4vw, 75px);
 }
