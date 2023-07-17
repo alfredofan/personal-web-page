@@ -98,3 +98,25 @@ width: fit-content;
 
 }
 
+
+
+/* 
+===============================
+            Buttons
+===============================
+*/
+
+/* carousel */
+div.carousel-caption button{
+  background-color: black;
+  border: 1px solid black;
+  color:#fff;
+}
+
+div.carousel-caption button:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+  color:black;
+
+
+}
+

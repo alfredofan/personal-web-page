@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterContainer, StickyFooterContainer,FooterNav, NavLink, SocialMediaContainer, SocialMediaLink, Copyright }
+import { FooterContainer, StickyFooterContainer,FooterNav, NavLink, SocialMediaContainer, LinkedinLink, GitHubLink, Copyright }
   from './FooterStyles';
 
 const CarouselFooter = () => {
@@ -11,11 +11,15 @@ const CarouselFooter = () => {
       <Copyright>
         &copy; {new Date().getFullYear()} Alfredo Faustino. 
       </Copyright>
-
-      <SocialMediaLink href="#">
+<div>
+      <LinkedinLink href="https://au.linkedin.com/in/alfredo-faustino-44034a70?trk=public_profile_samename-profile">
           <i className="fab fa-linkedin-in"></i>
-        </SocialMediaLink>
-        
+        </LinkedinLink>
+
+        <GitHubLink href="https://github.com/alfredofan/">
+          <i className="fab fa-github"></i>
+        </GitHubLink>
+        </div>
     </StickyFooterContainer>
   );
 };

@@ -59,10 +59,10 @@ export const NavLogo = styled.a`
   background-image: url(${logoImage});
   background-repeat: no-repeat;
   background-size: contain; 
-  height: 35px;
+  height: 30px;
   width: 100%;
   padding-left: 30px; // Adjust the padding as needed
-  margin-top: 25px;
+  margin-top: 27.5px;
 
   &:hover {
     opacity: 0.5;
@@ -183,13 +183,13 @@ export const SidenavLogo = styled.a`
   display: block;
   position: absolute;
   z-index: inherit;
-  top: 15px;
+  top: 17.5px;
   left: 47.5px; 
 
   background-image: url(${logoImageSide});
   background-repeat: no-repeat;
   background-size: contain; 
-  height: 35px;
+  height: 30px;
   width: 100%;
   padding-left: 30px; // Adjust the padding as needed
 

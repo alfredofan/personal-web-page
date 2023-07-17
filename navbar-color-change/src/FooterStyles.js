@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import logoLinkedin from './img/Social Media/icons8-linkedin-64_clean.png';
+import logoGitHub from './img/Social Media/github-2.png';
+
 
 
 
@@ -53,12 +55,12 @@ export const SocialMediaContainer = styled.div`
   margin-bottom: 20px;
 `;
 
-export const SocialMediaLink = styled.a`
+export const LinkedinLink = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background: transparent;
   color: #fff;
   margin: 0 10px;
@@ -73,6 +75,29 @@ export const SocialMediaLink = styled.a`
     opacity: 0.5;
   }
 `;
+
+
+export const GitHubLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  color: #fff;
+  margin: 0 10px;
+  // border-radius: 50%; //Roud effect
+  // text-decoration: none;
+  transition: background 0.3s ease;
+  background-image: url(${logoGitHub});
+  background-repeat: no-repeat;
+  background-size: contain; 
+
+  &:hover {
+    opacity: 0.5;
+  }
+`;
+
 
 export const Copyright = styled.p`
   text-align: center;
