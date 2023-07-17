@@ -78,9 +78,6 @@ const Navbar = () => {
             <NavItem>
               <NavLinks href="#">Contact</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks href="#">Sign In</NavLinks>
-            </NavItem>
           </NavMenu>
         </NavContainer>
         </Nav>
@@ -98,7 +95,7 @@ const Navbar = () => {
               </div>
             </MobileIcon>
 
-          <SidenavItem>
+            <SidenavItem style={{ marginTop: '20px' }}>
             <SidenavLinks href="#">About</SidenavLinks>
           </SidenavItem>
           <SidenavItem>
@@ -109,9 +106,6 @@ const Navbar = () => {
           </SidenavItem>
           <SidenavItem>
             <SidenavLinks href="#">Contact</SidenavLinks>
-          </SidenavItem>
-          <SidenavItem>
-            <SidenavLinks href="#">Sign In</SidenavLinks>
           </SidenavItem>
         </Sidenav>
 

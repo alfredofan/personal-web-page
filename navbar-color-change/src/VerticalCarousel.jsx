@@ -1,6 +1,6 @@
 // VerticalCarousel.js
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './VerticalCarousel.css'; // CSS custom styling
@@ -31,7 +31,7 @@ const VerticalCarousel = () => {
   };
 
 
-  // effect image movement
+  // image movement effect on hover 
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     const screenWidth = window.innerWidth;
@@ -52,20 +52,29 @@ const VerticalCarousel = () => {
       setMousePosition({ x: offsetX / 60, y: offsetY / 60 });
     }
   };
+
+
+// carousel loop back to the first slide after reaching the last slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) =>
+        prevSlide === carouselRef.current.props.children.length - 1 ? 0 : prevSlide + 1
+      );
+    }, 10000); // Slide Interval duration can be ajusted as needed
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div
-      className="carousel-container"
-      onWheel={handleScroll}
-      onMouseMove={handleMouseMove}
-    >
+    <div className="carousel-container" onWheel={handleScroll} onMouseMove={handleMouseMove}>
       <Carousel
         ref={carouselRef}
         showArrows={false}
         showThumbs={false}
         showStatus={false}
         emulateTouch={true}
-        autoPlay={true}
-        interval={5000}
+        autoPlay={false} // Disable autoPlay from the carousel component
+        interval={0} // Set interval to 0 to prevent conflicts with the useEffect hook
         transitionDuration={1000}
         axis="vertical"
         selectedItem={currentSlide}
