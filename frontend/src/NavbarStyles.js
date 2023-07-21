@@ -14,7 +14,9 @@ export const Nav = styled.nav`
   background: transparent;
   backdrop-filter: blur(4px); // Adjust the blur intensity as needed. blur not working on browsers for mobile devices
   -webkit-backdrop-filter: blur(4px); /* Safari */
-
+  -moz-backdrop-filter: blur(4px); /* Firefox */
+  -ms-backdrop-filter: blur(4px); /* IE 10 */
+  -o-backdrop-filter: blur(4px); /* Opera */
 
 
 
@@ -29,7 +31,7 @@ export const Nav = styled.nav`
   top: 0;
   /* Fix navbar by using above two lines of code */
   z-index: 1;
-  transition: background-color 0.6s ease; */
+  transition: background-color 0.6s ease;
 
 
   @media screen and (max-width: 960px) {

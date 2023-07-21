@@ -120,12 +120,8 @@ const ParallaxSection = () => {
       
       <div className="parallax">
 
-      <VideoPlayer 
-            style={{
-              transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
-              marginBottom: '20px',          
-            }}
-            />
+      <VideoPlayer />
+      
 
 {/* <video id="myBanner" style={{
   transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
