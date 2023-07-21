@@ -1,0 +1,95 @@
+/* ParallaxSection.css */
+
+/* Colors Variables */
+:root {
+  --primary-background-color: #f5f5f5;
+  --caption-text-color: #fff;
+  --button-background-color: #fff;
+  --button-text-color: #000;
+  --button-text-color-hover: #fff;
+  --button-border-color: #fff;
+}
+
+.parallax-container {
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 105vh !important; /* Adjust to position the container higher than the screen */
+  min-width: 105%;
+  width: 100px;
+  background-color: var(--primary-background-color);
+  position: fixed;
+  object-fit: cover;
+  overflow: hidden;
+  left: -20px; /* Adjust to position the container wider than the screen */
+  top: -30px;
+  position: fixed;
+  z-index: 0 !important;
+}
+
+.parallax img {
+  min-width: 105%;
+  height: 105vh;
+  object-fit: cover;
+  transition: transform 0.05s ease-in-out;
+}
+
+.parallax-caption {
+  margin-left: 20px; /* compensate the position adjustment to get carousel image wider than the screen */
+  margin-bottom: 150px; /* position the caption a bit above the center of the screen */
+
+  align-items: start;
+  position: absolute;
+  text-align: left;
+  color: var(--caption-text-color);
+  padding: 20px;
+  max-width: 1000px;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+}
+
+@media screen and (max-width: 1600px) {
+  .parallax-caption {
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .parallax-caption {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .parallax-caption {
+    max-width: 500px;
+  }
+}
+
+.parallax-caption button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--button-border-color);
+}
+
+.parallax-caption button:hover {
+  background-color: transparent;
+  color: var(--button-text-color-hover);
+  transition: transform 0.05s ease-in-out;
+}
