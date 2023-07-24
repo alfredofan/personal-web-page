@@ -28,7 +28,7 @@ import {
   
   import Footer from './Footer';
   import ContactForm from './ContactForm';
-
+  import Contact from './Contact';
 
 
 
@@ -232,7 +232,7 @@ const ParallaxSection = () => {
     </PageFullContainer>
     
     <PageFullContainer style={{backgroundColor: '#818181' }}>
-      <ContactForm/>
+      <Contact/>
     </PageFullContainer>
 
 

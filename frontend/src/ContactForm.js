@@ -1,18 +1,31 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
-import {
-  Container,
-  SmallContainer,
-  MediumContainer,
-  LargeContainer,
-  FullContainer,
-  PageContainer,
-  PageSmallContainer,
-  PageMediumContainer,
-  PageLargeContainer,
-  PageFullContainer,
-} from './Containers';
+import styled from 'styled-components'; // Import styled-components library
+
+const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  width: 90%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+`;
+
+
+const Input = styled.input`
+width: 100%;
+height: 40px;
+font-size:1rem;
+`;
+
+const TextArea = styled.textarea`
+width: 100%;
+height: 75px;
+font-size:1.05rem;
+`;
 
 const ContactForm = () => {
   const initialFormState = {
@@ -25,7 +38,6 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -89,46 +101,27 @@ const ContactForm = () => {
   };
 
   return (
-
-
-    <form onSubmit={handleSubmit}>
+    <FormContainer onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
+        <label htmlFor="name">Name</label><br/>
+        <Input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
         {errors.name && <p>{errors.name}</p>}
       </div>
       <div>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        <label htmlFor="email">Email</label><br/>
+        <Input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
         {errors.email && <p>{errors.email}</p>}
       </div>
       <div>
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-        />
+        <label htmlFor="message">Message</label><br/>
+        <TextArea id="message" name="message" value={formData.message} onChange={handleChange} />
         {errors.message && <p>{errors.message}</p>}
       </div>
       <ReCAPTCHA sitekey="YOUR_RECAPTCHA_SITE_KEY" onChange={handleCaptchaChange} />
       <button type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Submitting...' : 'Submit'}
       </button>
-    </form>
+    </FormContainer>
   );
 };
 
