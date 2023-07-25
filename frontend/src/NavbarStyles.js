@@ -30,7 +30,7 @@ export const Nav = styled.nav`
   position: fixed;
   top: 0;
   /* Fix navbar by using above two lines of code */
-  z-index: 1;
+  z-index: 2;
   transition: background-color 0.6s ease;
 
 
@@ -181,7 +181,7 @@ export const NavLinks = styled.a`
 export const Sidenav = styled.div`
   width: ${({ isOpen }) => (isOpen ? '250px' : '0')};
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   height: 100%;
   top: 0;
   left: 0;
@@ -285,7 +285,7 @@ export const Overlay = styled.a`
   width: 100%;
   display: block;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);

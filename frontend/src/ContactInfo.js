@@ -4,19 +4,19 @@ import styled from 'styled-components';
 const ContactInfoContainer = styled.div`
   flex: 1;
 
-  h2 {
-    font-size: 3rem;
-    color: #fefef9;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
+//   h2 {
+//     font-size: 3rem;
+     color: #fefef9;
+    //  font-weight: bold;
+     margin-bottom: 1rem;
+//   }
 
-  p {
-    color: #fefef9;
+//   p {
+     color: #fefef9;
     line-height: 1.8;
-    font-size: 1.25rem;
+//     font-size: 1.25rem;
 
-  }
+//   }
 
   a {
     display: inline-flex;
@@ -44,12 +44,12 @@ const ContactInfo = () => {
   return (
 
           <ContactInfoContainer>
-            <p className="">
+            <p className="font-medium">
               Contact
-            </p>
-            <h2 className="">
+            </p><br></br>
+            <h2 className="font-large">
             Let's Solve It Together!            </h2>
-            <p className="">
+            <p className="font-small">
             Got a challenge to tackle or a dream website to bring to life? Share your ideas, and I'll make it a reality!    <br></br>
 
 

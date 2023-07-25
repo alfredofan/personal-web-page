@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import ReactDOM from "react-dom";
 
 import './index.css'; // CSS custom styling
 import './ParallaxSection.css'; // CSS custom styling
@@ -11,6 +12,7 @@ import Image from './img/carousel/markus-spiske-6pflEeSzGUo-unsplash.jpg';
 import Video from './vid/_import_61557a2fa7fd98.46035599_preview.mp4';
 
 import VideoPlayer from './VideoPlayer';
+
 
 import {
     Container,
@@ -30,6 +32,13 @@ import {
   import ContactForm from './ContactForm';
   import Contact from './Contact';
 
+  import MagicScroll from './MagicScroll';
+  import Header from './Header';
+  import Curtain from './Curtain';
+
+
+   
+
 
 
 
@@ -39,12 +48,12 @@ align-items: center;
 justify-content: center;
 height: 100vh !important; /* Adjust to position the container higher than the screen */
 min-width: 100%;
-background-color: #f5f5f5;
+background-color: transparent;
 position: relative;
 object-fit: cover;
 overflow: hidden;
 
-z-index: 0 !important;
+z-index: -1 !important;
 
 
 
@@ -132,22 +141,7 @@ const ParallaxSection = () => {
 </video> */}
 
 
-        <div className="parallax-caption">
-          <p className="font-small" style={{ marginBottom: '0px' }}>
-            Hi, my name is
-          </p>
-          <h2 className="font-x-large" style={{ fontWeight: 'bold', margin: '0px' }}>
-            Alfredo Faustino
-          </h2>
-          <h2 className="font-large" style={{ marginTop: '0px' }}>
-            I build things for the web.
-          </h2>
-          <p className="font-small">
-            As a full stack developer, I bring your ideas to life by building innovative and
-            captivating online solutions.
-          </p>
-          <button>Learn More</button>
-        </div>
+<Header />
       </div>
     </div>
 
@@ -157,24 +151,9 @@ const ParallaxSection = () => {
 <ContentContainer>
 
 
-{/* <div style={{}}>
-      <div
-        className=""
-        style={{
-          minHeight: '250px',
-          maxHeight: '300px',
-          margin: '100px 0 50px 0px',
-          backgroundImage: 'url(your-image-url)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="banner-text">
-          <p>Purpose</p>
-        </div>
-      </div>
-    </div> */}
+<Curtain />
 
+{/* <MagicScroll  /> */}
 
 
 {/* <!-- Our Mission --> */}
@@ -231,16 +210,19 @@ const ParallaxSection = () => {
       </SmallContainer>
     </PageFullContainer>
     
-    <PageFullContainer style={{backgroundColor: '#818181' }}>
-      <Contact/>
+    <PageFullContainer style={{backgroundColor: '#fff' }} className="parallax-container" onMouseMove={handleMouseMove}>
     </PageFullContainer>
+
+    {/* <PageFullContainer style={{backgroundColor: '#000' }}> previous color: #818181 */}
+      <Contact/>
+    {/* </PageFullContainer> */}
 
 
 {/* <!-- video --> */}
 
-<FullContainer style={{backgroundColor: '#000' }}>
+{/* <FullContainer style={{backgroundColor: '#000' }}> */}
 
-  <VideoPlayer />
+  {/* <VideoPlayer /> */}
 
 {/* <video id="myBanner" style={{width:'100%', marginTop:'50px',}} controls autoplay loop muted playsinline>
     <source src={Video} type="video/mp4"></source>
@@ -250,7 +232,7 @@ const ParallaxSection = () => {
 
 {/* <!-- Company Values --> */}
 
-</FullContainer>
+{/* </FullContainer> */}
 
 
 <FullContainer style={{backgroundColor: '#000',  color: '#000'}}>

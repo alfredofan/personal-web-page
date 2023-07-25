@@ -7,6 +7,8 @@ import CarouselFooter from './CarouselFooter';
 import { FullContainer } from './Containers';
 import ParallaxSection from './ParallaxSection';
 import Footer from './Footer';
+import MagicScroll from './MagicScroll';
+
 
 
 function App() {
@@ -15,15 +17,12 @@ function App() {
       <Navbar />
       {/* <VerticalCarousel /> */}
       <FullContainer>
-        <section>
-          <br />
-       
-        </section>
+
       </FullContainer>
       {/* <CarouselFooter/> */}
       <ParallaxSection />
 
-      {/* <Footer/> */}
+      {/* <MagicScroll /> */}
 
     </Fragment>
   );

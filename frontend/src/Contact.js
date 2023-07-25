@@ -10,7 +10,7 @@ const ContactSection = styled.section`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #818181; /* Changed background color to gray #818181 */
+  background-color: #000; /* Changed background color to gray #818181 */
   padding-top: 7rem;
   padding-bottom: 7rem;
 
@@ -40,7 +40,7 @@ const ContactRight = styled.div`
 
   @media (max-width: 1024px) {
     justify-content: flex-start !important; /* Change back to flex-start on smaller screens */
-    min-width: none;
+    min-width: 100%;
     margin: 30px 0;
 
   }
@@ -51,7 +51,7 @@ const ContactLeft = styled.div`
   min-width: 450px;
 
     @media (max-width: 1024px) {
-      min-width: none;
+      min-width: 100%;
   
     }
 `;
@@ -65,7 +65,6 @@ const Contact = () => {
             <ContactInfo />
           </ContactLeft>
           <ContactRight>
-            {/* Replace the `astro-island` component with the `ContactForm` component */}
             <ContactForm />
           </ContactRight>
         </ContactMain>

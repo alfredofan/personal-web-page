@@ -20,18 +20,54 @@ body{
   /* height: 120vh; */
 }
 
+
+
+
+
+
+:root {
+  --transition: all 1s;
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+
+
+/* 
+==============================
+          Headline 
+==============================
+*/
+
+
+/* 
+==============================
+          Colors 
+==============================
+*/
+/* Colors Variables */
+
+
 /* 
 ===============================
             Fonts
 ===============================
 */
 
+.font-xx-large{
+  font-size: clamp(50px, 6vw, 95px);
+}
+
 .font-x-large{
-  font-size: clamp(45px, 6vw, 95px);
+  font-size: clamp(36px, 4vw, 70px);
 }
 
 .font-large{
-  font-size: clamp(33px, 4vw, 75px);
+  font-size: clamp(33px, 3vw, 55px);
 }
 
 .font-medium{
@@ -122,8 +158,102 @@ width: fit-content;
 ===============================
 */
 
-/* carousel */
-div.carousel-caption button{
+:root {
+  --primary-background-color: transparent;
+  --caption-text-color: #000;
+  --button-background-color: #fff;
+  --button-text-color: #fff;
+  --button-text-color-hover: #000;
+  --button-border-color: #fff;
+  --button-scale-factor: 1.05; /* Set the default scale factor for the button */
+}
+
+
+
+button::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+button:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+
+}
+
+button::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0;
+  background: hsl(0, 0%, 100%);
+  z-index: -1; /* Change z-index to -1 to position it behind the button content */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+button {
+  position: relative;
+  background-color: transparent;
+  color: var(--button-text-color) ;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px !important;
+  border-color: var(--button-border-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+  border-style: solid !important;
+
+}
+
+
+/* Add a hover style for the button */
+button:hover {
+  transform: scale(var(--button-scale-factor)); /* Zoom the button slightly */
+  color: black; /* Change the text color on hover */
+
+
+
+}
+
+
+
+/* 
+===============================
+            textboxes
+===============================
+*/
+
+input, textarea {
+background-color: transparent !important;
+border-color: #fff;
+border-style: solid !important;
+border-width: 1px !important;
+
+}
+
+
+
+
+
+
+
+/* parallax */
+
+
+
+
+
+
+/* carousel currently innactive*/
+/* div.carousel-caption button{
   background-color: black;
   border: 1px solid black;
   color:#fff;
@@ -134,5 +264,6 @@ div.carousel-caption button:hover{
   color:black;
 
 
-}
+} */
+
 
