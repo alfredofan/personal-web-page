@@ -8,6 +8,7 @@ import { FullContainer } from './Containers';
 import ParallaxSection from './ParallaxSection';
 import Footer from './Footer';
 import MagicScroll from './MagicScroll';
+import Curtain from './Curtain';
 
 
 
@@ -20,9 +21,10 @@ function App() {
 
       </FullContainer>
       {/* <CarouselFooter/> */}
-      <ParallaxSection />
 
-      {/* <MagicScroll /> */}
+      <ParallaxSection />
+      {/* <Curtain /> */}
+
 
     </Fragment>
   );

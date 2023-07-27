@@ -1,70 +1,121 @@
 import React, { useEffect, useState } from 'react';
-import './Curtain.css';
+import styled from 'styled-components';
+import logo from './img/personal_logo_white.png';
 
-const Curtain = () => {
-  const [isCurtainOpen, setIsCurtainOpen] = useState(false);
-  const [centerPosition, setCenterPosition] = useState(0);
+
+const styles = {
+  curtainLeft: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '0%', // Start with half the screen width
+    height: '110vh',
+    backgroundColor: 'transparent',
+    transition: 'width 0.3s ease', // Animate width change
+  },
+  curtainRight: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    width: '0%', // Start with half the screen width
+    height: '110vh',
+    backgroundColor: 'transparent',
+    transition: 'width 0.3s ease', // Animate width change
+  },
+
+  content: { 
+    // This class is used to make the content from left side slide out with the curtain
+
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column', // Align the content vertically
+    justifyContent: 'center', // Center the content horizontally
+    alignItems: 'center',
+  },
+
+  
+
+};
+
+ const Logo = styled.a`
+ display: flex;
+ align-self: center;
+ justify-content: center;
+ width: 106px;
+ height: 43px;
+ background: transparent;
+ color: #fff;
+ margin: 10px;
+ // border-radius: 50%; //Roud effect
+ // text-decoration: none;
+ transition: background 0.3s ease;
+ background-image: url(${logo});
+ background-repeat: no-repeat;
+ background-size: contain; 
+
+ &:hover {
+   opacity: 0.5;
+ }
+`;
+
+const CurtainEffect = () => {
+  const [curtainLeftWidth, setCurtainLeftWidth] = useState('0%'); // Start with half the screen width
+  const [curtainRightWidth, setCurtainRightWidth] = useState('0%'); // Start with half the screen width
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight ;
-      const sectionHeight = 100; // Adjust this value based on your section's height
-
-      // Calculate the central position of the section
-      const sectionTop = centerPosition - windowHeight / 2;
-      const sectionBottom = centerPosition + windowHeight / 0; //the 0 makes the curtain not open again when scolling up.
-
-      // Open the curtain when scrolling down and close when scrolling up near the central position
-      if (scrollPosition > sectionBottom || scrollPosition < sectionTop) {
-        setIsCurtainOpen(false);
-      } else {
-        setIsCurtainOpen(true);
-      }
+      const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 450; //scroll sensivity
+      const newCurtainLeftWidth = Math.min(50, scrollPercentage / 1.8); // Limit to a maximum of 50%
+      const newCurtainRightWidth = Math.min(55, scrollPercentage / 1.8); // Limit to a maximum of 50%
+      setCurtainLeftWidth(`${newCurtainLeftWidth}%`);
+      setCurtainRightWidth(`${newCurtainRightWidth}%`);
     };
-
-    // Calculate the central position of the section when the component mounts
-    const sectionElement = document.querySelector('.curtain');
-    if (sectionElement) {
-      const sectionRect = sectionElement.getBoundingClientRect();
-      setCenterPosition(sectionRect.top + window.scrollY + sectionRect.height / 2);
-    }
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [centerPosition]);
+  }, []);
 
   return (
-    <div className="curtain">
-      <div className={`curtain__wrapper ${isCurtainOpen ? 'open' : 'closed'}`}>
-        <input type="checkbox" checked={isCurtainOpen} readOnly />
+    <div>
+        {/* Left Curtain */}
+      <div style={{ ...styles.curtainLeft, width: curtainLeftWidth }} >
+        <div style={styles.content}>  
 
-        <div className="curtain__panel curtain__panel--left">
-          <h1>Click to reveal&nbsp;</h1>
+            <h2>Test</h2>
+    
         </div>
+      </div>
 
-        <div className="curtain__content">
-          <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/trophy.svg"
-            alt="Achievement Unlocked"
-          />
-          <h2>Achievement Unlocked!</h2>
-        </div>
 
-        <div className="curtain__panel curtain__panel--right">
-          <h1>a special reward...</h1>
-        </div>
+        {/* Right Curtain */}
+      <div style={{ ...styles.curtainRight, width: curtainRightWidth }} >
+      <div style={styles.content}>  
+
+        <h2>Test 2</h2>
+
+      </div>
+
       </div>
     </div>
   );
 };
 
+function Curtain() {
+  return (
+<div >
+<div style={styles.content}>  
+
+        <Logo />
+      <h1>Scroll up or down to see the curtain effect!</h1>
+
+      <CurtainEffect />
+      </div>
+
+    </div>
+  );
+}
+
 export default Curtain;
-
-
-
-
-

@@ -7,9 +7,7 @@ import ReactDOM from "react-dom";
 import './index.css'; // CSS custom styling
 import './ParallaxSection.css'; // CSS custom styling
 // import Image from './img/carousel/luigi-pozzoli-Db8xEYwtdWw-unsplash-2.jpg';
-import Image from './img/carousel/markus-spiske-6pflEeSzGUo-unsplash.jpg';
 
-import Video from './vid/_import_61557a2fa7fd98.46035599_preview.mp4';
 
 import VideoPlayer from './VideoPlayer';
 
@@ -29,10 +27,8 @@ import {
   } from './Containers';
   
   import Footer from './Footer';
-  import ContactForm from './ContactForm';
   import Contact from './Contact';
 
-  import MagicScroll from './MagicScroll';
   import Header from './Header';
   import Curtain from './Curtain';
 
@@ -151,16 +147,17 @@ const ParallaxSection = () => {
 <ContentContainer>
 
 
-<Curtain />
 
 {/* <MagicScroll  /> */}
 
 
 {/* <!-- Our Mission --> */}
 
-<PageFullContainer style={{backgroundColor: '#f1f1f1' }}>
+<PageFullContainer style={{backgroundColor: '#333' }}>
+
 {/* <div className="" style={{ width: '100%', height: '100vh',backgroundColor: '#f1f1f1' }}> */}
       <SmallContainer style={{justifyContent:'center', alignContent:'center'}}>
+
         <div className="" role="grid" style={{ marginTop: 0, marginBottom: 0 }}>
           <h2 className="" style={{ fontSize: 'clamp(22px, 3vw, 45px)' }}>
             Our Mission
@@ -170,8 +167,11 @@ const ParallaxSection = () => {
             At A2Z recyclers we understand the connection between a healthy planet and good recycling habits. We aim to make our earth green and inculcate recycling as a habit, not a practice.
           </p>
         </div>
+            <Curtain />
+
       </SmallContainer>
     {/* </div> */}
+
     </PageFullContainer>
 
 
@@ -179,7 +179,7 @@ const ParallaxSection = () => {
 {/* <!-- Our Vision --> */}
 
 
-<PageFullContainer style={{backgroundColor: '#818181' }}>
+<PageFullContainer className="parallax-container" style={{backgroundColor: '#818181' }}>
       <SmallContainer style={{justifyContent:'center', alignContent:'center'}}>
         <h2 className="" style={{ fontSize: 'clamp(22px, 3vw, 45px)' }}>
           Our Vision
@@ -210,8 +210,8 @@ const ParallaxSection = () => {
       </SmallContainer>
     </PageFullContainer>
     
-    <PageFullContainer style={{backgroundColor: '#fff' }} className="parallax-container" onMouseMove={handleMouseMove}>
-    </PageFullContainer>
+    {/* <PageFullContainer style={{backgroundColor: '#fff' }} className="parallax-container" onMouseMove={handleMouseMove}>
+    </PageFullContainer> */}
 
     {/* <PageFullContainer style={{backgroundColor: '#000' }}> previous color: #818181 */}
       <Contact/>
