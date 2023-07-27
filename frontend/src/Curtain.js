@@ -41,12 +41,14 @@ const styles = {
   },
   curtainBottom: {
     position: 'absolute',
-    // top: 0,
+    top: 0,
     right: 0,
     width: '100%', // Start with half the screen width
     height: '55vh',
     backgroundColor: 'transparent',
     transition: 'width 0.3s ease', // Animate width change
+    marginTop: '100%', // Half of the height (50%) to shift the bottom half into view
+
   },
 
   content: { 
@@ -57,6 +59,8 @@ const styles = {
     flexDirection: 'column', // Align the content vertically
     justifyContent: 'center', // Center the content horizontally
     alignItems: 'center',
+
+  // Center the content horizontally
   },
 
   
@@ -132,14 +136,14 @@ const CurtainEffect = () => {
       const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 450; //scroll sensivity
       // Effect for desktop curtains
 
-      const newCurtainLeftWidth = Math.min(50, scrollPercentage / 1.8); // Limit to a maximum of 50%
-      const newCurtainRightWidth = Math.min(50, scrollPercentage / 1.8); // Limit to a maximum of 50%
+      const newCurtainLeftWidth = Math.min(50, scrollPercentage / 4); // Limit to a maximum of 50%
+      const newCurtainRightWidth = Math.min(50, scrollPercentage / 4); // Limit to a maximum of 50%
       setCurtainLeftWidth(`${newCurtainLeftWidth}%`);
       setCurtainRightWidth(`${newCurtainRightWidth}%`);
       // Effect for mobile curtains
 
-      const newCurtainTopWidth = Math.min(100, scrollPercentage / .9); // Limit to a maximum of 50%
-      const newCurtainBottomWidth = Math.min(100, scrollPercentage / .9); // Limit to a maximum of 50%
+      const newCurtainTopWidth = Math.min(100, scrollPercentage / 1.8); // Limit to a maximum of 50%
+      const newCurtainBottomWidth = Math.min(100, scrollPercentage / 1.8); // Limit to a maximum of 50%
       setCurtainTopWidth(`${newCurtainTopWidth}%`);
       setCurtainBottomWidth(`${newCurtainBottomWidth}%`);
 
@@ -172,10 +176,25 @@ const CurtainEffect = () => {
 
         {/* Right Curtain */}
       <div style={{ ...styles.curtainRight, width: curtainRightWidth }} >
-      <div style={styles.content}>  
+      <div style={styles.content} >  
+<div style={{
+          display: 'block',
+          color: 'white',
+          textAlign:'left',
+          textAlignVertical: 'center',
+          padding: '20px',
+          width: '600px',
+          }}>
+        <h2 className='font-xx-large'>
+            Developer
+        </h2> <br></br>
 
-        <h2>Test 2</h2>
-
+  <p className='font-medium'>
+  Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
+  and interactive websites for you. I specialize in creating first-rate frontend and 
+  backend solutions. Let's team up and turn your web development vision into reality!
+  </p>
+  </div>
       </div>
       </div>
     </div>
@@ -200,9 +219,24 @@ const CurtainEffect = () => {
         {/* Right Curtain */}
       <div style={{ ...styles.curtainBottom, width: curtainBottomWidth }} >
       <div style={styles.content}>  
+      <div style={{
+          display: 'block',
+          color: 'white',
+          textAlign:'left',
+          textAlignVertical: 'center',
+          padding: '20px',
+          width: '400px',
+          }}>
+        <h2 className='font-xx-large'>
+            Developer
+        </h2> <br></br>
 
-        <h2>Test 2</h2>
-
+  <p className='font-medium'>
+  Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
+  and interactive websites for you. I specialize in creating first-rate frontend and 
+  backend solutions. Let's team up and turn your web development vision into reality!
+  </p>
+  </div>
       </div>
       </div>
     </div>
@@ -218,7 +252,7 @@ function Curtain() {
 <div style={styles.content}>  
 
         <Logo />
-      <h1>Scroll up or down to see the curtain effect!</h1>
+      {/* <h1>Scroll up or down to see the curtain effect!</h1> */}
 
       <CurtainEffect />
       </div>

@@ -158,15 +158,6 @@ const ParallaxSection = () => {
 {/* <div className="" style={{ width: '100%', height: '100vh',backgroundColor: '#f1f1f1' }}> */}
       <SmallContainer style={{justifyContent:'center', alignContent:'center'}}>
 
-        <div className="" role="grid" style={{ marginTop: 0, marginBottom: 0 }}>
-          <h2 className="" style={{ fontSize: 'clamp(22px, 3vw, 45px)' }}>
-            Our Mission
-          </h2>
-          <br />
-          <p style={{ padding: 20, fontSize: 'clamp(15px, 2vw, 22px)', textAlign: 'justify' }}>
-            At A2Z recyclers we understand the connection between a healthy planet and good recycling habits. We aim to make our earth green and inculcate recycling as a habit, not a practice.
-          </p>
-        </div>
             <Curtain />
 
       </SmallContainer>
@@ -178,7 +169,7 @@ const ParallaxSection = () => {
 
 {/* <!-- Our Vision --> */}
 
-
+{/* 
 <PageFullContainer className="parallax-container" style={{backgroundColor: '#818181' }}>
       <SmallContainer style={{justifyContent:'center', alignContent:'center'}}>
         <h2 className="" style={{ fontSize: 'clamp(22px, 3vw, 45px)' }}>
@@ -208,7 +199,7 @@ const ParallaxSection = () => {
             <strong>• Responsibility</strong>: to make everyone understand how good and bad recycling habits affect the environment.
           </p>
       </SmallContainer>
-    </PageFullContainer>
+    </PageFullContainer> */}
     
     {/* <PageFullContainer style={{backgroundColor: '#fff' }} className="parallax-container" onMouseMove={handleMouseMove}>
     </PageFullContainer> */}
