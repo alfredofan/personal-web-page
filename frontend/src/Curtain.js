@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import logo from './img/personal_logo_white.png';
+import photo from './img/Photos/mono.jpg';
+
+
 
 
 const styles = {
@@ -58,6 +61,22 @@ const styles = {
  }
 `;
 
+const Photo = styled.img`
+width: 100%;
+height: 110vh;
+// border-radius: 50%;
+background-image: url(${photo});
+background-repeat: no-repeat;
+background-size:cover; 
+
+//position photo 100px beyond left edge of the screen 
+// position: absolute;
+// left: -100px;
+
+}
+`;
+
+
 const CurtainEffect = () => {
   const [curtainLeftWidth, setCurtainLeftWidth] = useState('0%'); // Start with half the screen width
   const [curtainRightWidth, setCurtainRightWidth] = useState('0%'); // Start with half the screen width
@@ -66,7 +85,7 @@ const CurtainEffect = () => {
     const handleScroll = () => {
       const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 450; //scroll sensivity
       const newCurtainLeftWidth = Math.min(50, scrollPercentage / 1.8); // Limit to a maximum of 50%
-      const newCurtainRightWidth = Math.min(55, scrollPercentage / 1.8); // Limit to a maximum of 50%
+      const newCurtainRightWidth = Math.min(50, scrollPercentage / 1.8); // Limit to a maximum of 50%
       setCurtainLeftWidth(`${newCurtainLeftWidth}%`);
       setCurtainRightWidth(`${newCurtainRightWidth}%`);
     };
@@ -84,7 +103,9 @@ const CurtainEffect = () => {
       <div style={{ ...styles.curtainLeft, width: curtainLeftWidth }} >
         <div style={styles.content}>  
 
-            <h2>Test</h2>
+        <Photo />
+
+            {/* <h2>Test</h2> */}
     
         </div>
       </div>
