@@ -15,6 +15,8 @@ const styles = {
     height: '110vh',
     backgroundColor: 'transparent',
     transition: 'width 0.3s ease', // Animate width change
+
+    
   },
   curtainRight: {
     position: 'absolute',
@@ -22,6 +24,27 @@ const styles = {
     right: 0,
     width: '0%', // Start with half the screen width
     height: '110vh',
+    backgroundColor: 'transparent',
+    transition: 'width 0.3s ease', // Animate width change
+  },
+
+  curtainTop: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%', // Start with half the screen width
+    height: '55vh',
+    backgroundColor: 'transparent',
+    transition: 'width 0.3s ease', // Animate width change
+
+    
+  },
+  curtainBottom: {
+    position: 'absolute',
+    // top: 0,
+    right: 0,
+    width: '100%', // Start with half the screen width
+    height: '55vh',
     backgroundColor: 'transparent',
     transition: 'width 0.3s ease', // Animate width change
   },
@@ -76,18 +99,50 @@ background-size:cover;
 }
 `;
 
+const MobileCurtainsContainer = styled.div`
+  display: none; /* Hide the curtains on non-mobile devices */
 
+    @media (max-width: 768px) {
+      display: flex; /* Show the curtains on mobile devices */
+      flex-direction: column; /* Reverse the order for mobile layout */
+      height: 100vh;
+  }
+`;
+
+const DesktopCurtainsContainer = styled.div`
+  display: none; /* Hide the curtains on non-mobile devices */
+
+    @media (min-width: 768px) {
+      display: flex; /* Show the curtains on mobile devices */
+      flex-direction: column-reverse; /* Reverse the order for mobile layout */
+      height: 100vh;
+  }
+`;
+
+// Effect for desktop curtains
 const CurtainEffect = () => {
   const [curtainLeftWidth, setCurtainLeftWidth] = useState('0%'); // Start with half the screen width
   const [curtainRightWidth, setCurtainRightWidth] = useState('0%'); // Start with half the screen width
 
+  const [curtainTopWidth, setCurtainTopWidth] = useState('0%'); // Start with half the screen width
+  const [curtainBottomWidth, setCurtainBottomWidth] = useState('0%'); // Start with half the screen width
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 450; //scroll sensivity
+      // Effect for desktop curtains
+
       const newCurtainLeftWidth = Math.min(50, scrollPercentage / 1.8); // Limit to a maximum of 50%
       const newCurtainRightWidth = Math.min(50, scrollPercentage / 1.8); // Limit to a maximum of 50%
       setCurtainLeftWidth(`${newCurtainLeftWidth}%`);
       setCurtainRightWidth(`${newCurtainRightWidth}%`);
+      // Effect for mobile curtains
+
+      const newCurtainTopWidth = Math.min(100, scrollPercentage / .9); // Limit to a maximum of 50%
+      const newCurtainBottomWidth = Math.min(100, scrollPercentage / .9); // Limit to a maximum of 50%
+      setCurtainTopWidth(`${newCurtainTopWidth}%`);
+      setCurtainBottomWidth(`${newCurtainBottomWidth}%`);
+
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -99,6 +154,10 @@ const CurtainEffect = () => {
 
   return (
     <div>
+
+    <DesktopCurtainsContainer>
+    <div>
+
         {/* Left Curtain */}
       <div style={{ ...styles.curtainLeft, width: curtainLeftWidth }} >
         <div style={styles.content}>  
@@ -118,9 +177,38 @@ const CurtainEffect = () => {
         <h2>Test 2</h2>
 
       </div>
-
       </div>
     </div>
+    </DesktopCurtainsContainer>
+
+
+    <MobileCurtainsContainer>
+    <div>
+
+        {/* Left Curtain */}
+      <div style={{ ...styles.curtainTop, width: curtainTopWidth }} >
+        <div style={styles.content}>  
+
+        <Photo />
+
+            {/* <h2>Test</h2> */}
+
+        </div>
+      </div>
+
+
+        {/* Right Curtain */}
+      <div style={{ ...styles.curtainBottom, width: curtainBottomWidth }} >
+      <div style={styles.content}>  
+
+        <h2>Test 2</h2>
+
+      </div>
+      </div>
+    </div>
+    </MobileCurtainsContainer>
+    </div>
+
   );
 };
 
