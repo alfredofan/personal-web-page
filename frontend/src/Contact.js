@@ -7,6 +7,7 @@ const ContactSection = styled.section`
   position: relative;
   // z-index: 10;
   display: flex;
+  height: fit-content;
   width: 100%;
   justify-content: center;
   align-items: center;

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+
+
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -16,7 +18,7 @@ const Header = () => {
   }, []);
 
   // Define the fade-out and slide-in animation based on the scroll position
-  const fadeOutOpacity = Math.min(1, 1 - scrollY / 400);
+  const fadeOutOpacity = Math.min(1, 1 - scrollY / 450);
   const slideInY = Math.min(0, 150 - scrollY / 5);
   const slideDown = Math.min(0, 50 - scrollY / 10); // Adjust the slide down distance as needed
 
@@ -34,7 +36,7 @@ const Header = () => {
       <h2 className="font-xx-large" style={{ fontWeight: "bold", margin: "0px" }}>
         Alfredo Faustino
       </h2>
-      <h2 className="font-x-large" style={{ marginTop: "0px" }}>
+      <h2 className="font-large" style={{ marginTop: "0px" }}>
         I build things for the web.
       </h2>
       <p className="font-small">      <br></br>
@@ -44,6 +46,7 @@ const Header = () => {
       <br></br>
       <button>Learn More</button>
     </div>
+
   );
 };
 

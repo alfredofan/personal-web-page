@@ -30,8 +30,6 @@ align-items: center!important;
 padding: 0;
 overflow: hidden;
 -webkit-overflow-scrolling: touch; /* Disable horizontal overflow for Safari */
-
-
 `;
 
 export const StyledFullContainer = styled.div`

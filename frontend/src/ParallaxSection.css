@@ -45,26 +45,34 @@
 }
 
 .parallax-caption {
-  margin-left: 20px; 
-  margin-bottom: 150px !important; /* position the caption a bit above the center of the screen */
+  /* margin-left: 20px;  */
 
+  margin-bottom: 100px !important; /* position the caption a bit above the center of the screen */
 
-  align-items: start;
+  align-items: center !important;
   position: absolute;
   text-align: left;
   color: var(--caption-text-color);
-  padding: 20px;
-  max-width: 1000px;
+  padding-right: 3vw; 
+  max-width: 90%;
+
+  /* width: fit-content; */
   transform: translate(0%, 0%);
 
   transition: var(--transition);
   /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
+@media screen and (max-width: 767px) {
+  .parallax-caption {
+    padding-left: 20px;
+    padding-right: 0px !important; 
 
+}
+}
 
-
-@media screen and (max-width: 1600px) {
+/* Old media query for container */
+/* @media screen and (max-width: 1600px) {
   .parallax-caption {
     max-width: 800px;
   }
@@ -72,14 +80,14 @@
 
 @media screen and (max-width: 1200px) {
   .parallax-caption {
-    max-width: 600px;
+    max-width: 900px;
   }
 }
 
 @media screen and (max-width: 1010px) {
   .parallax-caption {
-    max-width: 500px;
+    max-width: 800px;
   }
-}
+} */
 
 

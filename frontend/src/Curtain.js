@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import logo from './img/personal_logo_white.png';
 import photo from './img/Photos/mono.jpg';
+import LogoFadeOut from './LogoFadeOut';
 
 
 
@@ -29,7 +30,7 @@ const styles = {
   },
 
   curtainTop: {
-    position: 'absolute',
+    position: 'absolute',  
     top: 0,
     left: 0,
     width: '100%', // Start with half the screen width
@@ -40,14 +41,14 @@ const styles = {
     
   },
   curtainBottom: {
-    position: 'absolute',
+    position: 'absolute',     
     top: 0,
     right: 0,
     width: '100%', // Start with half the screen width
     height: '55vh',
     backgroundColor: 'transparent',
     transition: 'width 0.3s ease', // Animate width change
-    marginTop: '100%', // Half of the height (50%) to shift the bottom half into view
+    marginTop: '50vh', // Half of the height (50%) to shift the bottom half into view
 
   },
 
@@ -73,9 +74,10 @@ const styles = {
  justify-content: center;
  width: 106px;
  height: 43px;
+ position: absolute;
  background: transparent;
  color: #fff;
- margin: 10px;
+ margin-bottom: 75% !important;
  // border-radius: 50%; //Roud effect
  // text-decoration: none;
  transition: background 0.3s ease;
@@ -106,10 +108,10 @@ background-size:cover;
 const MobileCurtainsContainer = styled.div`
   display: none; /* Hide the curtains on non-mobile devices */
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.9px) {
       display: flex; /* Show the curtains on mobile devices */
       flex-direction: column; /* Reverse the order for mobile layout */
-      height: 100vh;
+      height: fit-content;
   }
 `;
 
@@ -118,8 +120,7 @@ const DesktopCurtainsContainer = styled.div`
 
     @media (min-width: 768px) {
       display: flex; /* Show the curtains on mobile devices */
-      flex-direction: column-reverse; /* Reverse the order for mobile layout */
-      height: 100vh;
+      height: 110vh;
   }
 `;
 
@@ -136,14 +137,14 @@ const CurtainEffect = () => {
       const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 450; //scroll sensivity
       // Effect for desktop curtains
 
-      const newCurtainLeftWidth = Math.min(50, scrollPercentage / 4); // Limit to a maximum of 50%
-      const newCurtainRightWidth = Math.min(50, scrollPercentage / 4); // Limit to a maximum of 50%
+      const newCurtainLeftWidth = Math.min(50, scrollPercentage / 3.3); // Limit to a maximum of 50%
+      const newCurtainRightWidth = Math.min(50, scrollPercentage / 3.3); // Limit to a maximum of 50%
       setCurtainLeftWidth(`${newCurtainLeftWidth}%`);
       setCurtainRightWidth(`${newCurtainRightWidth}%`);
       // Effect for mobile curtains
 
-      const newCurtainTopWidth = Math.min(100, scrollPercentage / 1.8); // Limit to a maximum of 50%
-      const newCurtainBottomWidth = Math.min(100, scrollPercentage / 1.8); // Limit to a maximum of 50%
+      const newCurtainTopWidth = Math.min(100, scrollPercentage / 1.6); // Limit to a maximum of 50%
+      const newCurtainBottomWidth = Math.min(100, scrollPercentage / 1.6); // Limit to a maximum of 50%
       setCurtainTopWidth(`${newCurtainTopWidth}%`);
       setCurtainBottomWidth(`${newCurtainBottomWidth}%`);
 
@@ -177,19 +178,24 @@ const CurtainEffect = () => {
         {/* Right Curtain */}
       <div style={{ ...styles.curtainRight, width: curtainRightWidth }} >
       <div style={styles.content} >  
+
 <div style={{
           display: 'block',
           color: 'white',
           textAlign:'left',
           textAlignVertical: 'center',
-          padding: '20px',
-          width: '600px',
+          // padding: '40px',
+          minWidth: '350px',
+          width: '90%',
           }}>
-        <h2 className='font-xx-large'>
+        <p className='font-medium' font->
+            About
+        </p> <br></br>
+        <h2 className='font-x-large'>
             Developer
         </h2> <br></br>
 
-  <p className='font-medium'>
+  <p className='font-small'>
   Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
   and interactive websites for you. I specialize in creating first-rate frontend and 
   backend solutions. Let's team up and turn your web development vision into reality!
@@ -220,18 +226,25 @@ const CurtainEffect = () => {
       <div style={{ ...styles.curtainBottom, width: curtainBottomWidth }} >
       <div style={styles.content}>  
       <div style={{
+        // position: 'absolute',
           display: 'block',
           color: 'white',
           textAlign:'left',
           textAlignVertical: 'center',
-          padding: '20px',
-          width: '400px',
+          // padding: '20px',
+          minWidth: '300px',
+          width: '90%',
           }}>
+
+        <p className='font-medium' font->
+            About
+        </p> <br></br>
+
         <h2 className='font-xx-large'>
             Developer
         </h2> <br></br>
 
-  <p className='font-medium'>
+  <p className='font-small'>
   Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
   and interactive websites for you. I specialize in creating first-rate frontend and 
   backend solutions. Let's team up and turn your web development vision into reality!
@@ -251,7 +264,7 @@ function Curtain() {
 <div >
 <div style={styles.content}>  
 
-        <Logo />
+        <LogoFadeOut />
       {/* <h1>Scroll up or down to see the curtain effect!</h1> */}
 
       <CurtainEffect />
