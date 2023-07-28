@@ -42,12 +42,13 @@ const ParallaxContainer = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-height: 100vh !important; /* Adjust to position the container higher than the screen */
+height: 110vh !important; /* Adjust to position the container higher than the screen */
 min-width: 100%;
 background-color: transparent;
 position: relative;
 object-fit: cover;
 overflow: hidden;
+background-color: #000;
 
 z-index: -1 !important;
 
@@ -79,7 +80,7 @@ margin-bottom: 200px;
 
 const ContentContainer = styled.div`
   height: fit-content;
-  background-color: red;
+  background-color: transparent;
   font-size: 36px;
   position: absolute;
   width: 100%;
@@ -137,14 +138,14 @@ const ParallaxSection = () => {
 </video> */}
 
 
-<Header />
+        <Header />
       </div>
     </div>
 
 
-    </ParallaxContainer>
+    </ParallaxContainer >
 
-<ContentContainer>
+<ContentContainer >
 
 
 
@@ -153,17 +154,15 @@ const ParallaxSection = () => {
 
 {/* <!-- Our Mission --> */}
 
-<PageFullContainer style={{backgroundColor: '#333' }}>
+    <FullContainer style={{backgroundColor: '#333', maxHeight:'110vh', position:'relative', alignItems:'center', justifyContent:'center',}}>
 
 {/* <div className="" style={{ width: '100%', height: '100vh',backgroundColor: '#f1f1f1' }}> */}
-      <SmallContainer style={{justifyContent:'center', alignContent:'center'}}>
 
             <Curtain />
 
-      </SmallContainer>
     {/* </div> */}
 
-    </PageFullContainer>
+    </FullContainer>
 
 
 

@@ -60,15 +60,15 @@ body{
 */
 
 .font-xx-large{
-  font-size: clamp(43px, 11vw, 95px);
+  font-size: clamp(43px, 7vw, 95px);
 }
 
 .font-x-large{
-  font-size: clamp(36px, 9vw, 70px);
+  font-size: clamp(36px, 6vw, 70px);
 }
 
 .font-large{
-  font-size: clamp(28px, 7vw, 55px);
+  font-size: clamp(28px, 6vw, 55px);
 }
 
 .font-medium{
@@ -84,6 +84,11 @@ body{
   font-size: clamp(12px, 1.25vw, 15px);
 }
 
+.font-xx-large, .font-x-large, .font-large,
+.font-medium, .font-small, .font-x-small{
+  margin: 0px;
+  padding: 0px;
+}
 
 /* 
 ===============================

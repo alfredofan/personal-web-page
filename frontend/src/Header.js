@@ -1,6 +1,19 @@
 import React, { useEffect, useState } from "react";
+import styled, { keyframes } from 'styled-components';
 
 
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+const HeaderContainer = styled.div`
+  animation:  ${fadeIn} 1s 0s ease-in-out;
+`;
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -30,7 +43,7 @@ const Header = () => {
   };
 
   return (
-    <div className="parallax-caption" style={captionStyle}>
+    <HeaderContainer className="parallax-caption" style={captionStyle}>
       <p className="font-small">Hi, my name is</p>      
 
       <h2 className="font-xx-large" style={{ fontWeight: "bold", margin: "0px" }}>
@@ -45,7 +58,7 @@ const Header = () => {
       </p>
       <br></br>
       <button>Learn More</button>
-    </div>
+    </HeaderContainer>
 
   );
 };

@@ -62,7 +62,7 @@ const VideoPlayer = () => {
       style={{
         position: 'relative',
         minWidth: '105%',
-        height: '110vh ', // Set the height to 100vh to take the full screen height, Add 30px to the height using the calc() function
+        height: '120vh ', // Set the height to 100vh to take the full screen height, Add 30px to the height using the calc() function
         overflow: 'hidden', // Prevent child elements from overflowing
         top:'-30px',
 
@@ -73,7 +73,7 @@ const VideoPlayer = () => {
     >
       <video
         ref={videoRef}
-        style={{ width: '105%', height: 'calc(110vh + 30px)',  objectFit: 'cover', 
+        style={{ width: '105%', height: 'calc(120vh + 30px)',  objectFit: 'cover', 
     
         transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
     }}
@@ -87,7 +87,11 @@ const VideoPlayer = () => {
         <source src={Video} type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
-      {!isPlaying && (
+      {!isPlaying 
+
+//Reserved for play button
+
+      /*&& (
         <button
           style={{
             position: 'absolute',
@@ -105,7 +109,9 @@ const VideoPlayer = () => {
         >
           Play
         </button>
-      )}
+        )*/
+
+        }
     </div>
   );
 };
