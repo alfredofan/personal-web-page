@@ -219,6 +219,29 @@ export const GitHubLink = styled.a`
 `;
 
 
+export const EmailLink = styled.a`
+  margin: 0 10px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.25rem;
+    color: #fefef9;
+    transition: color 0.2s ease;
+    /* Set icons and links to white color */
+
+    svg {
+      /* Adjust icon size proportionally */
+      width: 25px;
+      height: 25px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+`;
+
 export const Copyright = styled.p`
   text-align: center;
   font-size: 14px;

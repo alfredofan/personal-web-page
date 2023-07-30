@@ -4,10 +4,17 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import styled from 'styled-components'; // Import styled-components library
 
 const FormContainer = styled.form`
+
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: .8rem;
   width: 90%;
+  color: white;
+
+ 
+  label {
+    line-height:35px;
+   }
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -19,12 +26,32 @@ const Input = styled.input`
 width: 100%;
 height: 40px;
 font-size:1rem;
+color: #fff;
+background-color: #151515 !important;
+border-color: #222222;
+outline: none; /* Remove default focus outline */
+
+
+&:focus {
+  border-color: #333;
+  box-shadow: 0 0 5px #333; /*  box shadow to highlight the focused element */
+}
 `;
 
 const TextArea = styled.textarea`
 width: 100%;
 height: 75px;
 font-size:1.05rem;
+background-color: #151515 !important;
+border-color: #222222;
+outline: none; /* Remove default focus outline */
+
+
+
+&:focus {
+  border-color: #333;
+  box-shadow: 0 0 5px #333; /*  box shadow to highlight the focused element */
+}
 `;
 
 const ContactForm = () => {

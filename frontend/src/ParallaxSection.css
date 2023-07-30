@@ -47,7 +47,7 @@
 .parallax-caption {
   /* margin-left: 20px;  */
 
-  margin-bottom: 10vh !important; /* position the caption a bit above the center of the screen */
+  margin-bottom: 25vh !important; /* position the caption a bit above the center of the screen */
 
   align-items: center !important;
   position: absolute;
@@ -67,22 +67,32 @@
 @media screen and (max-width: 991px) {
   .parallax-caption {
     padding-left: 20px;
-
     padding-right: 0px !important;
-    margin-bottom: 0px !important; 
+
   }
-  .parallax-caption .font-small {
-    font-size: 10px!important;
+
+}
+
+/* mobile vertical screen */
+@media (max-aspect-ratio: 9/16) {
+
+.parallax-caption .font-small {
+  font-size: 10px!important;
 }
 }
 
+
+/* UltraWide and mobile widescreen */
 @media (min-aspect-ratio: 21/10) {
   .parallax-caption {
+    margin-bottom: 0px !important; 
     margin-top: 10.5vh;  
     max-width: 70%;
     padding-right: 0px !important; 
 
 }
+
+
   /* .parallax-caption .font-xx-large {
     font-size: clamp(36px, 7vw, 70px)!important;
   }

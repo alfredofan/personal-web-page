@@ -105,7 +105,7 @@ const MobileCurtainsContainer = styled.div`
       height: 110vh;
   }
 
-  @media (min-aspect-ratio: 21/11) {
+  @media (min-aspect-ratio: 21/10) {
     display: none; /* Hide the curtains on non-mobile devices */
   }
 `;
@@ -118,7 +118,7 @@ const DesktopCurtainsContainer = styled.div`
       height: 110vh;
   }
 
-  @media (min-aspect-ratio: 21/11) { //used 21:11 instead of 21:9 because of different mobile browsers
+  @media (min-aspect-ratio: 21/10) { //used 21:10.5 instead of 21:9 because of different mobile browsers
      display: none; /* Hide the curtains on non-mobile devices */
   }
 `;
@@ -127,7 +127,7 @@ const DesktopCurtainsContainer = styled.div`
 const UltrawideCurtainsContainer = styled.div`
   display: none; /* Hide the curtains on non-mobile devices */
 
-    @media (min-aspect-ratio: 21/11) {
+    @media (min-aspect-ratio: 21/10) {
       display: flex; /* Show the curtains on mobile devices */
       height: 110vh;
   }
@@ -185,7 +185,7 @@ const CurtainEffect = () => {
   }, []);
 
   return (
-<div>
+<div >
 
 
 
@@ -326,7 +326,7 @@ const CurtainEffect = () => {
 
 function Curtain() {
   return (
-<div >
+<div id="about">
   <div style={styles.content}>  
     <DesktopCurtainsContainer>
         <LogoFadeOut />

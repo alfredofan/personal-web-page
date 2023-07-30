@@ -71,16 +71,16 @@ const Navbar = () => {
 
           <NavMenu>
             <NavItem>
-              <NavLinks href="#">About</NavLinks>
+              <NavLinks href="#about">About</NavLinks>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLinks href="#">Services</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks href="#">Events</NavLinks>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
-              <NavLinks href="#">Contact</NavLinks>
+              <NavLinks href="#contact">Contact</NavLinks>
             </NavItem>
           </NavMenu>
         </NavContainer>
@@ -100,16 +100,16 @@ const Navbar = () => {
             </MobileIcon>
 
             <SidenavItem style={{ marginTop: '20px' }}>
-            <SidenavLinks href="#">About</SidenavLinks>
+            <SidenavLinks href="#about">About</SidenavLinks>
           </SidenavItem>
-          <SidenavItem>
+          {/* <SidenavItem>
             <SidenavLinks href="#">Services</SidenavLinks>
           </SidenavItem>
           <SidenavItem>
             <SidenavLinks href="#">Events</SidenavLinks>
-          </SidenavItem>
+          </SidenavItem> */}
           <SidenavItem>
-            <SidenavLinks href="#">Contact</SidenavLinks>
+            <SidenavLinks href="#contact">Contact</SidenavLinks>
           </SidenavItem>
         </Sidenav>
 

@@ -93,7 +93,7 @@ export const LogoFadeOut = () => {
     const captionStyle = {
       opacity: fadeOutOpacity,
       transform: `translateY(${slideInY}px)`,
-      transition: "opacity 0.3s, transform 0.8s",
+      transition: "opacity 0.8s, transform 0.8s",
       marginBottom: `${slideDown}px`, // Apply the slide down transformation
     };
   
