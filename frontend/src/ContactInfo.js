@@ -3,20 +3,13 @@ import styled from 'styled-components';
 
 const ContactInfoContainer = styled.div`
   flex: 1;
+  color: #fefef9;
+  line-height: 1.8;
 
-//   h2 {
-//     font-size: 3rem;
-     color: #fefef9;
-    //  font-weight: bold;
-     margin-bottom: 1rem;
-//   }
 
-//   p {
-     color: #fefef9;
-    line-height: 1.8;
-//     font-size: 1.25rem;
-
-//   }
+   h2 {
+    line-height:50px;
+   }
 
   a {
     display: inline-flex;
@@ -35,7 +28,7 @@ const ContactInfoContainer = styled.div`
     }
 
     &:hover {
-      color: #000;
+      opacity: 0.5;
     }
   }
 `;
@@ -46,18 +39,25 @@ const ContactInfo = () => {
           <ContactInfoContainer>
             <p className="font-medium">
               Contact
-            </p><br></br>
+            </p><br/>
+
             <h2 className="font-large">
-            Let's Solve It Together!            </h2>
+              Let's Solve It Together!            
+            </h2><br />
+            
             <p className="font-small">
-            Got a challenge to tackle or a dream website to bring to life? Share your ideas, and I'll make it a reality!    <br></br>
+              Got a challenge to tackle or a dream website to bring to life? Share your ideas, and I'll make it a reality!
+            </p><br />
 
 
 
 
-        </p>
             {/* Updated email address */}
-            <a href="mailto:fan.alfredo@gmail.com" title="Contact me">
+            <a href="mailto:fan.alfredo@gmail.com" title="Contact me" 
+            style={{ 
+              fontSize:'16px', 
+              textDecoration:'none',
+              }}>
               <svg
                 aria-hidden="true"
                 className="h-5 inline w-5 mr-2"
