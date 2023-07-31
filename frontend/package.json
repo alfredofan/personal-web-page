@@ -1,7 +1,7 @@
 {
   "name": "personal-web-page",
   "version": "0.1.0",
-  "homepage": "https://alfredofan.github.io/personal-web-page/frontend/public/",
+  "homepage": "https://alfredofan.github.io/personal-web-page",
 
   "private": true,
   "dependencies": {
