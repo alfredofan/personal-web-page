@@ -227,7 +227,7 @@ export const EmailLink = styled.a`
     align-items: center;
     font-size: 1.25rem;
     color: #fefef9;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease;l
     /* Set icons and links to white color */
 
     svg {

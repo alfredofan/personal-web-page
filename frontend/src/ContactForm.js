@@ -111,10 +111,13 @@ const ContactForm = () => {
     if (validateForm() && captchaToken) {
       setIsSubmitting(true);
       try {
-        const response = await axios.post('/api/submit-form', {
-          ...formData,
-          captchaToken,
-        });
+        const response = await axios.post(
+          'YOUR_FIREBASE_CLOUD_FUNCTION_URL',
+          {
+            ...formData,
+            captchaToken,
+          }
+        );
         console.log('Form submitted:', response.data);
         // Reset the form after successful submission
         setFormData(initialFormState);
