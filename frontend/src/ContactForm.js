@@ -41,7 +41,8 @@ outline: none; /* Remove default focus outline */
 const TextArea = styled.textarea`
 width: 100%;
 height: 75px;
-font-size:1.05rem;
+color: #fff !important;
+font-size:1rem;
 background-color: #151515 !important;
 border-color: #222222;
 outline: none; /* Remove default focus outline */
