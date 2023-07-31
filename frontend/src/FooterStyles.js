@@ -225,8 +225,11 @@ export const EmailLink = styled.a`
   a {
     display: inline-flex;
     align-items: center;
-    font-size: 1.25rem;
-    color: #fefef9;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    color: #fff !important;
     transition: color 0.2s ease;l
     /* Set icons and links to white color */
 
