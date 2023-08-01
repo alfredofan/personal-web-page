@@ -113,7 +113,7 @@ const ContactForm = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          'YOUR_FIREBASE_CLOUD_FUNCTION_URL',
+          '6LfYX28nAAAAAH7zxdr6Fwwoh0NceGgvdnk5JOgx', //YOUR_FIREBASE_CLOUD_FUNCTION_URL
           {
             ...formData,
             captchaToken,
@@ -148,7 +148,7 @@ const ContactForm = () => {
         <TextArea id="message" name="message" value={formData.message} onChange={handleChange} />
         {errors.message && <p>{errors.message}</p>}
       </div>
-      <ReCAPTCHA sitekey="YOUR_RECAPTCHA_SITE_KEY" onChange={handleCaptchaChange} />
+      <ReCAPTCHA sitekey="6LfYX28nAAAAAFrZOlBjSBgUX_44rSzoSrI4EKxj" onChange={handleCaptchaChange} />
       <button type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Submitting...' : 'Submit'}
       </button>

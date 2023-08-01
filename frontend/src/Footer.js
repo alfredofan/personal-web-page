@@ -74,9 +74,6 @@ const Footer = () => {
             <a href="mailto:fan.alfredo@gmail.com" title="Contact me">
               <svg
                 aria-hidden="true"
-                className="h-5 inline w-5 mr-2"
-                fill="currentColor"
-                viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path

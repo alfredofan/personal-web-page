@@ -225,19 +225,19 @@ export const EmailLink = styled.a`
   a {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    background: transparent;
-    color: #fff !important;
-    transition: color 0.2s ease;l
+    font-size: 1.25rem;
+    color: #fefef9;
+    transition: color 0.2s ease;
     /* Set icons and links to white color */
+    color: #fefef9;
 
     svg {
       /* Adjust icon size proportionally */
-      width: 25px;
-      height: 25px;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-right: 0.5rem;
     }
+
 
     &:hover {
       opacity: 0.5;
