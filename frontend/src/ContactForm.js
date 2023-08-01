@@ -113,7 +113,7 @@ const ContactForm = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          '6LfYX28nAAAAAH7zxdr6Fwwoh0NceGgvdnk5JOgx', //YOUR_FIREBASE_CLOUD_FUNCTION_URL
+          'noreply@af-website-f848f.firebaseapp.com', //YOUR_FIREBASE_CLOUD_FUNCTION_URL
           {
             ...formData,
             captchaToken,
