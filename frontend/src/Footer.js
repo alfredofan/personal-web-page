@@ -73,8 +73,11 @@ const Footer = () => {
         <EmailLink>
             <a href="mailto:fan.alfredo@gmail.com" title="Contact me">
               <svg
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              className="h-5 inline w-5 mr-2"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"

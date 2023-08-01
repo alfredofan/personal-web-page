@@ -221,23 +221,24 @@ export const GitHubLink = styled.a`
 
 export const EmailLink = styled.div`
   margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   a {
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.25rem;
-    color: #fefef9;
+
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    color: #fff !important;
     transition: color 0.2s ease;
     /* Set icons and links to white color */
-    color: #fefef9;
 
     svg {
       /* Adjust icon size proportionally */
-      width: 1.25rem;
-      height: 1.25rem;
-      margin-right: 0.5rem;
+      width: 25px;
+      height: 25px;
     }
-
 
     &:hover {
       opacity: 0.5;

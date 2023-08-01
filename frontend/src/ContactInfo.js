@@ -15,7 +15,6 @@ const ContactInfoContainer = styled.div`
     display: inline-flex;
     align-items: center;
     font-size: 1.25rem;
-    color: #fefef9;
     transition: color 0.2s ease;
     /* Set icons and links to white color */
     color: #fefef9;
@@ -60,7 +59,11 @@ const ContactInfo = () => {
               }}>
               <svg
                 aria-hidden="true"
+                className="h-5 inline w-5 mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                style={{color: '#fff !important',}}
               >
                 <path
                   d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
