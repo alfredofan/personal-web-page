@@ -219,7 +219,7 @@ export const GitHubLink = styled.a`
 `;
 
 
-export const EmailLink = styled.a`
+export const EmailLink = styled.div`
   margin: 0 10px;
 
   a {
