@@ -118,14 +118,14 @@ const ContactForm = () => {
     setCaptchaToken(value);
   };
 
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm() && captchaToken) {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          '/.netlify/functions/submit', // Endpoint on your backend server to handle form submissions. Use the correct function endpoint URL
+          'https://alfredofaustino.com/.netlify/functions/submit', // Endpoint on your backend server to handle form submissions. Use the correct function endpoint URL
           {
             ...formData,
             captchaToken,
