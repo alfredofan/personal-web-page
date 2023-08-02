@@ -36,7 +36,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "node-sass src -o src"
+    "sass": "node-sass src -o src",
+    "build-lambda": "netlify-lambda build netlify/functions"
+
   },
   "eslintConfig": {
     "extends": [
