@@ -5,11 +5,13 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
 // Enable Cross-Origin Resource Sharing (CORS) to allow requests from the frontend
 app.use(cors({
     origin: 'https://alfredofaustino.com', // URL of frontend (e.g., my personal website domain)
   })
 );
+
 
 // Parse incoming request bodies in JSON format
 app.use(bodyParser.json());

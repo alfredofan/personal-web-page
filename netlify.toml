@@ -3,4 +3,6 @@
   base = "frontend"
   command = "npm run build"
   publish = "build"
+  functions = "functions" # Change "functions" to directory name
+
 
