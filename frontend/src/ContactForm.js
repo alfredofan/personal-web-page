@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styled from 'styled-components'; // Import styled-components library
-import recaptchaSiteKey from 'frontend/.netlify/functions/submit.js'; //
+import recaptchaSiteKey from 'personal-web-page/frontend/.netlify/functions/submit.js'; //
 
 
 
