@@ -168,11 +168,10 @@ const ContactForm = () => {
         <TextArea id="message" name="message" value={formData.message} onChange={handleChange} />
         {errors.message && <ErrorMessage>{errors.message}</ErrorMessage>}
       </div>
-      
-      {/* sitekey={process.env.RECAPTCHA_SITEKEY} environment variable*/}
 
+            {/* sitekey={process.env.RECAPTCHA_SITEKEY} environment variable*/}
 
-      <ReCAPTCHA sitekey={process.env.RECAPTCHA_SITEKEY} onChange={handleCaptchaChange} />  
+      <ReCAPTCHA sitekey="6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0" onChange={handleCaptchaChange} />
       <button type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Submitting...' : 'Submit'}
       </button>
