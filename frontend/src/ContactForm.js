@@ -7,7 +7,6 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import styled from 'styled-components'; // Import styled-components library
 
 // Import the environment variable directly from .env
-require('dotenv').config(); // Ensure this line is at the top of your file
 const RECAPTCHA_SITEKEY = process.env.AF_REACT_APP_RECAPTCHA_SITEKEY; // Use REACT_APP_ prefix
 
 
