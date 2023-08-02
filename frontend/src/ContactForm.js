@@ -176,7 +176,7 @@ const ContactForm = () => {
 
 
 
-      <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY} onChange={handleCaptchaChange} />
+      <reCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} onChange={handleCaptchaChange} />
         <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
