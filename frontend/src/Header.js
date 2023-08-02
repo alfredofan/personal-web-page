@@ -57,7 +57,7 @@ const Header = () => {
         As a full stack developer, I bring your ideas to life by building innovative and captivating online solutions.
       </p>
       <br></br>
-      <button>Learn More</button>
+      {/* <button>Learn More</button> */}
     </HeaderContainer>
 
   );
