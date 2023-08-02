@@ -14,6 +14,7 @@
     "firebase": "^8.6.8",
     "firebase-functions": "^4.4.1",
     "netlify-cli": "^15.10.0",
+    "nodemailer": "^6.9.4",
     "react": "^17.0.2",
     "react-device-orientation-hook": "^1.0.1",
     "react-dom": "^17.0.2",
@@ -37,8 +38,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass": "node-sass src -o src",
-    "build-lambda": "netlify-lambda build netlify/functions"
-
   },
   "eslintConfig": {
     "extends": [
@@ -61,10 +60,5 @@
   "engines": {
     "node": "14.17.0"
   },
-
-
   "proxy": "https://alfredofaustino.com/.netlify/functions"
-
-
-  
 }
