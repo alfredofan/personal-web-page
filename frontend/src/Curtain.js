@@ -303,11 +303,11 @@ const CurtainEffect = () => {
 
             <p className='font-medium' font->
               About
-            </p> <br></br>
+            </p> <br/><br/>
 
             <h2 className='font-xx-large'>
               Developer
-            </h2> <br></br>
+            </h2> <br/><br/>
 
             <p className='font-small'>
             Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 

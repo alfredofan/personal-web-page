@@ -1,7 +1,13 @@
+//ContactForm.js
+
+// Styled-components and other imports
 import React, { useState } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styled from 'styled-components'; // Import styled-components library
+
+
+// Styled-components and other imports
 
 const FormContainer = styled.form`
 
@@ -53,6 +59,11 @@ outline: none; /* Remove default focus outline */
   border-color: #333;
   box-shadow: 0 0 5px #333; /*  box shadow to highlight the focused element */
 }
+`;
+
+const ErrorMessage = styled.p`
+  color: red;
+  font-size: 0.9rem;
 `;
 
 const ContactForm = () => {
@@ -107,13 +118,14 @@ const ContactForm = () => {
     setCaptchaToken(value);
   };
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm() && captchaToken) {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          'noreply@af-website-f848f.firebaseapp.com', //YOUR_FIREBASE_CLOUD_FUNCTION_URL
+          '/.netlify/functions/submit', // Endpoint on your backend server to handle form submissions. Use the correct function endpoint URL
           {
             ...formData,
             captchaToken,
@@ -131,24 +143,26 @@ const ContactForm = () => {
     }
   };
 
+
   return (
     <FormContainer onSubmit={handleSubmit}>
+      {/* The "htmlFor" attribute should match the "id" of the associated form element */}
       <div>
         <label htmlFor="name">Name</label><br/>
         <Input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <ErrorMessage>{errors.name}</ErrorMessage>} {/* Display error messages with a red color */}
       </div>
       <div>
         <label htmlFor="email">Email</label><br/>
         <Input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
       </div>
       <div>
         <label htmlFor="message">Message</label><br/>
         <TextArea id="message" name="message" value={formData.message} onChange={handleChange} />
-        {errors.message && <p>{errors.message}</p>}
+        {errors.message && <ErrorMessage>{errors.message}</ErrorMessage>}
       </div>
-      <ReCAPTCHA sitekey="6LfYX28nAAAAAFrZOlBjSBgUX_44rSzoSrI4EKxj" onChange={handleCaptchaChange} />
+      <ReCAPTCHA sitekey="6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0" onChange={handleCaptchaChange} />
       <button type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Submitting...' : 'Submit'}
       </button>

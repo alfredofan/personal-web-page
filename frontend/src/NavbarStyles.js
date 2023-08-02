@@ -263,21 +263,54 @@ export const SidenavItem = styled.li`
   list-style-type: none; /* this line is to hide the list marker */
 `;
 
+
 export const SidenavLinks = styled.a`
   color: ${sidenavLinksColor};
   font-size: 1.5rem;
-  display: flex;
   align-items: center;
+  
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   height: 100%;
   cursor: pointer;
+  position: relative;  
   width:100%;
   z-index: inherit;
 
+
+
   &:hover {
-    color: ${sidenavLinksHoverColor};
+    // color: ${sidenavLinksColor};
+    opacity: 0.5;
+
   }
+
+&:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: ${sidenavLinksColor};
+  height: 1px;
+}
+
+&:hover:after {
+  
+  width: 70%; //approximatelly size of the word (link)
+}
+
+&:after{
+  transition: all .5s;
+}
+
+&:before {
+  transition: all .5s;
+}
+
 `;
 
 export const Overlay = styled.a`

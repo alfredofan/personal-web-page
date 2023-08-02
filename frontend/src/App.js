@@ -8,9 +8,13 @@ import ParallaxSection from './ParallaxSection';
 import Footer from './Footer';
 import Curtain from './Curtain';
 import LoadingScreen from './LoadingScreen'; // Import the LoadingScreen component
+import InstructionsModal from './InstructionsModal'; // Import the InstructionsModal component
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [showInstructions, setShowInstructions] = useState(false);
+
 
   // Simulate a delay to show the loading screen (you can replace this with actual data loading logic)
   useEffect(() => {
@@ -18,6 +22,19 @@ function App() {
       setIsLoading(false);
     }, 2000);
   }, []);
+
+  useEffect(() => {
+    // Show the instructions modal once the loading is complete and add a delay of 2 seconds
+    if (!isLoading) {
+      setTimeout(() => {
+        setShowInstructions(true);
+      }, 2000); // Adjust the delay (in milliseconds) to your preferred value
+    }
+  }, [isLoading]);
+
+  const handleModalClose = () => {
+    setShowInstructions(false);
+  };
 
   return (
   <Fragment>
@@ -39,7 +56,9 @@ function App() {
   
       </Fragment>
       )}
-      {/* <Footer /> */}
+
+      {/* Render the instructions modal if showInstructions is true */}
+      {showInstructions && <InstructionsModal onClose={handleModalClose} />}
   </Fragment>
   );
 }
