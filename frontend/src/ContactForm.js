@@ -150,6 +150,11 @@ const ContactForm = () => {
     }
   };
 
+  
+  // sitekey={process.env.RECAPTCHA_SITEKEY} environment variable
+  const siteKey = process.env.RECAPTCHA_SITEKEY;
+
+  
   return (
     <FormContainer onSubmit={handleSubmit}>
       {/* The "htmlFor" attribute should match the "id" of the associated form element */}
@@ -169,12 +174,11 @@ const ContactForm = () => {
         {errors.message && <ErrorMessage>{errors.message}</ErrorMessage>}
       </div>
 
-            {/* sitekey={process.env.RECAPTCHA_SITEKEY} environment variable*/}
 
-            <ReCAPTCHA sitekey={process.env.RECAPTCHA_SITEKEY} onChange={handleCaptchaChange} />
-      <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? 'Submitting...' : 'Submit'}
-      </button>
+      <ReCAPTCHA sitekey={siteKey} onChange={handleCaptchaChange} />
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Submitting...' : 'Submit'}
+        </button>
     </FormContainer>
   );
 };
