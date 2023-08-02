@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
+  // Replace the SMTP transport options with your email service credentials
   host: 'smtp-mail.outlook.com', // SMTP for Gmail: 'smtp.gmail.com'
   port: 587,
   secure: false,
@@ -10,6 +11,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// Helper function to send email notification
 const sendEmailNotification = async (formData) => {
   try {
     const emailContent = `
@@ -33,6 +35,7 @@ const sendEmailNotification = async (formData) => {
   }
 };
 
+// Lambda function to handle form submissions
 exports.handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return {
@@ -44,7 +47,8 @@ exports.handler = async (event, context) => {
   try {
     const formData = JSON.parse(event.body);
 
-    // Perform server-side validation (similar to the client-side validation)
+    // existing form validation logic
+    // ...
 
     // Send email notification to the admin
     await sendEmailNotification(formData);
