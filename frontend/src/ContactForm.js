@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styled from 'styled-components'; // Import styled-components library
-import recaptchaSiteKey from 'personal-web-page/frontend/.netlify/functions/submit.js'; //
 
 
 
@@ -178,7 +177,10 @@ const ContactForm = () => {
 
 
 
-      <ReCAPTCHA sitekey={recaptchaSiteKey} onChange={handleCaptchaChange} />
+      <ReCAPTCHA 
+        sitekey="6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0" 
+        onChange={handleCaptchaChange} 
+      />
         <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
