@@ -126,7 +126,7 @@ const ContactForm = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          'https://alfredofaustino.com/.netlify/functions/submit', // Use the Netlify function URL for handling form submissions
+          'https://alfredofaustino.com/functions/submit', // Use the Netlify function URL for handling form submissions
           {
             ...formData,
             captchaToken,
