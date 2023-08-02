@@ -126,7 +126,7 @@ const ContactForm = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          'http://localhost:5000/submit', // Endpoint for Netlify function to handle form submissions
+          'https://alfredofaustino.com/.netlify/functions/submit', // Use the Netlify function URL for handling form submissions
           {
             ...formData,
             captchaToken,
@@ -135,10 +135,14 @@ const ContactForm = () => {
         console.log('Form submitted:', response.data);
         // Reset the form after successful submission
         setFormData(initialFormState);
+        setIsSubmitting(false);
+        // Show a success message to the user (you can create a success modal or a toast message)
+        alert('Form submission successful!');
       } catch (error) {
         console.error('Form submission failed:', error);
         // Handle the error and show a user-friendly message if needed
-      } finally {
+        // Show an error message to the user (you can create an error modal or a toast message)
+        alert('Form submission failed. Please try again later.');
         setIsSubmitting(false);
       }
     }

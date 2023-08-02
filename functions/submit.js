@@ -1,47 +1,53 @@
-// functions/submit.js
 const nodemailer = require('nodemailer');
 
-exports.handler = async function (event) {
-  const formData = JSON.parse(event.body);
+const transporter = nodemailer.createTransport({
+  // Replace the SMTP transport options with your email service credentials
+  host: 'smtp-mail.outlook.com', // SMTP for Gmail: 'smtp.gmail.com'
+  port: 587,
+  secure: false,
+  auth: {
+    user: 'alfredofaustino@outlook.com', // Replace with your email address
+    pass: 'Qbasn8!23', // Replace with your email password or use environment variables for better security
+  },
+});
 
-  // Email sending setup using Nodemailer
-  const transporter = nodemailer.createTransport({
-    // Replace the SMTP transport options with your email service credentials
-    host: 'smtp-mail.outlook.com', // SMTP for Gmail: 'smtp.gmail.com'
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'alfredofaustino@outlook.com',
-      pass: 'Qbasn8!23',
-    },
-  });
+// Helper function to send email notification
+const sendEmailNotification = async (formData) => {
+  try {
+    const emailContent = `
+      New Contact Form Submission:
 
-  // Helper function to send email notification
-  const sendEmailNotification = async (formData) => {
-    try {
-      const emailContent = `
-        New Contact Form Submission:
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Message: ${formData.message}
+    `;
 
-        Name: ${formData.name}
-        Email: ${formData.email}
-        Message: ${formData.message}
-      `;
+    const mailOptions = {
+      from: 'alfredofaustino@outlook.com', // Replace with your email address
+      to: 'alfredofaustino@outlook.com', // Replace with your email address
+      subject: 'New Contact Form Submission',
+      text: emailContent,
+    };
 
-      const mailOptions = {
-        from: 'alfredofaustino@outlook.com', // Replace with your email address
-        to: 'alfredofaustino@outlook.com', // Replace with your email address
-        subject: 'New Contact Form Submission',
-        text: emailContent,
-      };
+    await transporter.sendMail(mailOptions);
+  } catch (error) {
+    console.error('Failed to send email notification:', error);
+  }
+};
 
-      await transporter.sendMail(mailOptions);
-    } catch (error) {
-      console.error('Failed to send email notification:', error);
-    }
-  };
+// Lambda function to handle form submissions
+exports.handler = async (event, context) => {
+  if (event.httpMethod !== 'POST') {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: 'Method Not Allowed' }),
+    };
+  }
 
   try {
-    // ... Your form validation and Firestore insertion logic ...
+    const formData = JSON.parse(event.body);
+
+    // Perform server-side validation (similar to the client-side validation)
 
     // Send email notification to the admin
     await sendEmailNotification(formData);
