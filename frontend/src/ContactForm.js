@@ -152,7 +152,7 @@ const ContactForm = () => {
 
 
   // Use the environment variable directly
-  const siteKey = process.env.RECAPTCHA_SITEKEY;
+  // const siteKey = process.env.RECAPTCHA_SITEKEY;
 
     
   return (
@@ -176,7 +176,7 @@ const ContactForm = () => {
 
 
 
-      <reCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} onChange={handleCaptchaChange} />
+      <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} onChange={handleCaptchaChange} />
         <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
