@@ -6,10 +6,6 @@ import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 import styled from 'styled-components'; // Import styled-components library
 
-// Import the environment variable directly from .env
-const RECAPTCHA_SITEKEY = process.env.AF_REACT_APP_RECAPTCHA_SITEKEY; // Use REACT_APP_ prefix
-
-
 
 // Styled-components and other imports
 
@@ -154,6 +150,10 @@ const ContactForm = () => {
     }
   };
 
+
+  // Use the environment variable directly
+  const siteKey = process.env.RECAPTCHA_SITEKEY;
+
     
   return (
     <FormContainer onSubmit={handleSubmit}>
@@ -175,7 +175,7 @@ const ContactForm = () => {
       </div>
 
 
-      <ReCAPTCHA sitekey={RECAPTCHA_SITEKEY} onChange={handleCaptchaChange} />
+      <ReCAPTCHA sitekey={siteKey} onChange={handleCaptchaChange} />
         <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
