@@ -174,11 +174,10 @@ const ContactForm = () => {
         {errors.message && <ErrorMessage>{errors.message}</ErrorMessage>}
       </div>
 
-
-    <ReCAPTCHA sitekey={process.env.RECAPTCHA_SITEKEY} onChange={handleCaptchaChange} />
-      <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? 'Submitting...' : 'Submit'}
-      </button>
+      <ReCAPTCHA sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY} onChange={handleCaptchaChange} />
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Submitting...' : 'Submit'}
+        </button>
     </FormContainer>
   );
 };
