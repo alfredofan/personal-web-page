@@ -1,9 +1,10 @@
 
 [build]
   base = "frontend"
-  command = "npm run build"
-  publish = "build"
+  command = "REACT_APP_RECAPTCHA_SITEKEY=$RECAPTCHA_SITEKEY npm run build"  publish = "build"
 
+[context.production]
+  publish = "output/"
+  command = "make publish"
+  environment = { NODE_VERSION = "14.15.3" }
 
-[context.production.environment]
-  REACT_APP_GREETING = "6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0"
