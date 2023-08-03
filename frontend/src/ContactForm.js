@@ -3,7 +3,7 @@
 // Styled-components and other imports
 import React, { useState } from 'react';
 import axios from 'axios';
-import ReCAPTCHA from 'react-google-recaptcha';
+import Recaptcha  from 'react-google-recaptcha';
 import styled from 'styled-components'; // Import styled-components library
 
 
@@ -170,7 +170,10 @@ const ContactForm = () => {
 
 
 
-      <ReCAPTCHA 
+      <Recaptcha  
+
+        size="normal"
+        id="recaptcha-google"
         sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY} 
         onChange={handleCaptchaChange} 
       />
