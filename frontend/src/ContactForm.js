@@ -170,11 +170,10 @@ const ContactForm = () => {
 
 
 
-      <Recaptcha  
-
+      <Recaptcha
         size="normal"
         id="recaptcha-google"
-        sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY} 
+        sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}  // Use the correct environment variable key here
         onChange={handleCaptchaChange} 
       />
       <button type="submit" disabled={isSubmitting}>
