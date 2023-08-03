@@ -1,9 +1,9 @@
 [build]
   base = "frontend"
-  command = "REACT_APP_RECAPTCHA_SITEKEY=$RECAPTCHA_SITEKEY npm run build"
+  command = "npm run build" 
   publish = "build"
 
 [context.production]
   publish = "output/"
   command = "make publish"
-  environment = { NODE_VERSION = "14.15.3" }
+  environment = { NODE_VERSION = "14.15.3", REACT_APP_RECAPTCHA_SITEKEY = "$RECAPTCHA_SITEKEY" }  # Add the environment variable here
