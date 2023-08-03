@@ -67,6 +67,9 @@ const ErrorMessage = styled.p`
   font-size: 0.9rem;
 `;
 
+const RECAPTCHA_KEY = '6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0'
+
+
 const ContactForm = () => {
   const initialFormState = {
     name: '',
@@ -121,35 +124,23 @@ const ContactForm = () => {
 
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (validateForm() && captchaToken) {
-      setIsSubmitting(true);
-      try {
-        const response = await axios.post(
-          '/.netlify/functions/submit', // Use the Netlify function URL for handling form submissions
-          {
-            ...formData,
-            captchaToken,
-          }
-        );
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    const recaptchaValue = recaptchaRef.current.getValue()
 
-
-        console.log('Form submitted:', response.data);
-        // Reset the form after successful submission
-        setFormData(initialFormState);
-        setIsSubmitting(false);
-        // Show a success message to the user (you can create a success modal or a toast message)
-        alert('Form submission successful!');
-      } catch (error) {
-        console.error('Form submission failed:', error);
-        // Handle the error and show a user-friendly message if needed
-        // Show an error message to the user (you can create an error modal or a toast message)
-        alert('Form submission failed. Please try again later.');
-        setIsSubmitting(false);
-      }
-    }
-  };
+    fetch('/.netlify/functions/submit', { // Update the endpoint to the Netlify function
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        'g-recaptcha-response': recaptchaValue,
+        ...state,
+      }),
+    })
+    .then(() => navigate(form.getAttribute('action')))
+    .catch(error => alert(error))
+  }
 
 
   // Use the environment variable directly
@@ -157,7 +148,14 @@ const ContactForm = () => {
 
     
   return (
-    <FormContainer onSubmit={handleSubmit}>
+    <FormContainer 
+      name="contact-us"
+      method="POST"
+      data-netlify="true"              // the Netlify data attribute
+      data-netlify-recaptcha="true"
+      action="/thank-you"
+      onSubmit={handleSubmit}       
+    >
       {/* The "htmlFor" attribute should match the "id" of the associated form element */}
       <div>
         <label htmlFor="name">Name</label><br/>
@@ -178,7 +176,12 @@ const ContactForm = () => {
 
 
       <ReCAPTCHA 
-        sitekey="6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0" 
+        ref={recaptchaRef}
+        sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY} // Use the environment variable
+        size="normal"
+        id="recaptcha-google"
+
+        // sitekey="6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0" 
         onChange={handleCaptchaChange} 
       />
         <button type="submit" disabled={isSubmitting}>
