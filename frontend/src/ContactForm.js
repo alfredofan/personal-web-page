@@ -71,6 +71,10 @@ const RECAPTCHA_KEY = '6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0'
 
 
 const ContactForm = () => {
+  const [state, setState] = React.useState({})
+
+  const recaptchaRef = React.createRef() // new Ref for reCaptcha
+  
   const initialFormState = {
     name: '',
     email: '',
