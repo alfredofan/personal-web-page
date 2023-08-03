@@ -5,3 +5,5 @@
   publish = "build"
 
 
+[context.production.environment]
+  REACT_APP_GREETING = "6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0"
