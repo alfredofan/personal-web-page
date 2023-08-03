@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { navigate } from 'gatsby'
 import styled from 'styled-components'; // Import styled-components library
 
 
@@ -74,7 +75,7 @@ const ContactForm = () => {
   const [state, setState] = React.useState({})
 
   const recaptchaRef = React.createRef() // new Ref for reCaptcha
-  
+
   const initialFormState = {
     name: '',
     email: '',
