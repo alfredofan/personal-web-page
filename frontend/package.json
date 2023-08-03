@@ -60,5 +60,8 @@
   "engines": {
     "node": "14.17.0"
   },
-  "proxy": "https://alfredofaustino.com/.netlify/functions"
+  "proxy": "https://alfredofaustino.com/.netlify/functions",
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1"
+  }
 }
