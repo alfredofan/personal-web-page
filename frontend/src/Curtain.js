@@ -111,10 +111,10 @@ const MobileCurtainsContainer = styled.div`
 `;
 
 const DesktopCurtainsContainer = styled.div`
-  display: none; /* Hide the curtains on non-mobile devices */
+  display: none; /* Hide the curtains on non-desktop devices */
 
     @media (min-width: 768px) {
-      display: flex; /* Show the curtains on mobile devices */
+      display: flex; /* Show the curtains on desktop devices */
       height: 110vh;
   }
 
@@ -125,14 +125,14 @@ const DesktopCurtainsContainer = styled.div`
 
 
 const UltrawideCurtainsContainer = styled.div`
-  display: none; /* Hide the curtains on non-mobile devices */
+  display: none; /* Hide the curtains on non-ultrawide devices */
 
     @media (min-aspect-ratio: 21/10) {
-      display: flex; /* Show the curtains on mobile devices */
+      display: flex; /* Show the curtains on ultrawide devices */
       height: 110vh;
   }
 //   @media (max-width: 768px) {
-//     display: none; /* Hide the curtains on non-mobile devices */
+//     display: none; /* Hide the curtains on non-ultrawide devices */
 
 // }
 `;
