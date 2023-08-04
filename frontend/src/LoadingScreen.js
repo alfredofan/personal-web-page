@@ -30,11 +30,11 @@ const Logo = styled.a`
   opacity: 0;
 
   @media (max-width: 768px) {
-    margin-bottom: 25vh;
+    margin-bottom: 25vh !important;
 }
 
 @media (min-aspect-ratio: 21/10) {
-  margin-bottom: 10vh;
+  margin-bottom: 10vh !important;
 }
 
 `;
