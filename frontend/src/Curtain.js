@@ -15,9 +15,7 @@ const styles = {
     width: '0%', // Start with half the screen width
     height: '110vh',
     backgroundColor: 'transparent',
-    // transition: 'width 0.3s ease', // Animate width change    
-    transition: 'transform 0.3s ease', // Change to transform for hardware acceleration - // Animate width change
-
+    transition: 'width 0.3s ease', // Animate width change    
   },
   curtainRight: {
     position: 'absolute',
@@ -26,8 +24,7 @@ const styles = {
     width: '0%', // Start with half the screen width
     height: '110vh',
     backgroundColor: 'transparent',
-    transition: 'transform 0.3s ease', // Change to transform for hardware acceleration - // Animate width change
-
+    transition: 'width 0.3s ease', // Animate width change
   },
 
   curtainTop: {
@@ -37,7 +34,7 @@ const styles = {
     width: '100%', // Start with half the screen width
     height: '55vh',
     backgroundColor: 'transparent',
-    transition: 'transform 0.3s ease', // Change to transform for hardware acceleration - // Animate width change
+    transition: 'width 0.3s ease', // Animate width change
   },
   curtainBottom: {
     position: 'absolute',     
@@ -46,7 +43,7 @@ const styles = {
     width: '100%', // Start with half the screen width
     height: '55vh',
     backgroundColor: 'transparent',
-    transition: 'transform 0.3s ease', // Change to transform for hardware acceleration - // Animate width change
+    transition: 'width 0.3s ease', // Animate width change
     marginTop: '55vh', // Half of the height (50%) to shift the bottom half into view
   },
 
@@ -196,14 +193,14 @@ const CurtainEffect = () => {
     <div>
 
         {/* Left Curtain */}
-        <div style={{ ...styles.curtainLeft, transform: `translate3d(-${curtainWideLeftWidth}, 0, 0)` }}>
+      <div style={{ ...styles.curtainLeft, width: curtainWideLeftWidth }} >
         <div style={styles.content}>  
           <Photo />
         </div>
       </div>
 
         {/* Right Curtain */}
-        <div style={{ ...styles.curtainRight, transform: `translate3d(${curtainWideRightWidth}, 0, 0)` }}>
+      <div style={{ ...styles.curtainRight, width: curtainWideRightWidth }} >
         <div style={styles.content} >  
 
           <div style={{
@@ -239,14 +236,14 @@ const CurtainEffect = () => {
     <div>
       
         {/* Left Curtain */}
-        <div style={{ ...styles.curtainLeft, transform: `translate3d(-${curtainLeftWidth}%, 0, 0)` }}>
+      <div style={{ ...styles.curtainLeft, width: curtainLeftWidth }} >
         <div style={styles.content}>  
           <Photo />
         </div>
       </div>
 
         {/* Right Curtain */}
-        <div style={{ ...styles.curtainRight, transform: `translate3d(${curtainRightWidth}%, 0, 0)` }}>
+      <div style={{ ...styles.curtainRight, width: curtainRightWidth }} >
         <div style={styles.content} >  
           <div style={{
                     display: 'block',
@@ -280,7 +277,7 @@ const CurtainEffect = () => {
     <div>
 
         {/* Left Curtain */}
-        <div style={{ ...styles.curtainTop, transform: `translate3d(0, -${curtainTopWidth}%, 0)` }}>
+      <div style={{ ...styles.curtainTop, width: curtainTopWidth }} >
         <div style={styles.content}>  
           <Photo />
         </div>
@@ -288,7 +285,7 @@ const CurtainEffect = () => {
 
 
         {/* Right Curtain */}
-        <div style={{ ...styles.curtainBottom, transform: `translate3d(0, ${curtainBottomWidth}%, 0)` }}>
+      <div style={{ ...styles.curtainBottom, width: curtainBottomWidth }} >
         <div style={styles.content}>  
           <div style={{
             // position: 'absolute',
