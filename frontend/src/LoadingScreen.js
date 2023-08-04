@@ -30,7 +30,7 @@ const Logo = styled.a`
   opacity: 0;
 
 
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     margin-bottom: 25vh;
 }
 
