@@ -216,9 +216,9 @@ const CurtainEffect = () => {
             <p className='font-medium' >
               About
             </p> <br></br>
-            <h2 className='font-x-large'>
+            {/* <h2 className='font-x-large'>
               Developer
-            </h2> <br></br>
+            </h2> <br></br> */}
 
             <p className='font-small'>
               Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
@@ -257,9 +257,9 @@ const CurtainEffect = () => {
               <p className='font-medium' font->
                   About
               </p> <br></br>
-              <h2 className='font-x-large'>
+              {/* <h2 className='font-x-large'>
                   Developer
-              </h2> <br></br>
+              </h2> <br></br> */}
 
               <p className='font-small'>
               Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
@@ -305,9 +305,9 @@ const CurtainEffect = () => {
               About
             </p> <br/><br/>
 
-            <h2 className='font-xx-large'>
+            {/* <h2 className='font-xx-large'>
               Developer
-            </h2> <br/><br/>
+            </h2> <br/><br/> */}
 
             <p className='font-small'>
             Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
