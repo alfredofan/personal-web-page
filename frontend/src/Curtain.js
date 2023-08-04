@@ -118,27 +118,27 @@ const DesktopCurtainsContainer = styled.div`
       height: 110vh;
   }
 
-  @media (min-aspect-ratio: 21/10) { //used 21:10.5 instead of 21:9 because of different mobile browsers
-     display: none; /* Hide the curtains on non-mobile devices */
+  @media (min-aspect-ratio: 21/10) { //used 21:10.5 instead of 21:9 because of different desktop browsers
+     display: none; /* Hide the curtains on non-desktop devices */
   }
 `;
 
 
 const UltrawideCurtainsContainer = styled.div`
-  display: none; /* Hide the curtains on non-ultrawide devices */
+  display: none; /* Hide the curtains on non-desktop devices */
 
     @media (min-aspect-ratio: 21/10) {
-      display: flex; /* Show the curtains on ultrawide devices */
+      display: flex; /* Show the curtains on desktop devices */
       height: 110vh;
   }
 //   @media (max-width: 768px) {
-//     display: none; /* Hide the curtains on non-ultrawide devices */
+//     display: none; /* Hide the curtains on non-mobile devices */
 
 // }
 `;
 
 
-// Effect for curtains
+// Effect for  curtains
 const CurtainEffect = () => {
   const [curtainLeftWidth, setCurtainLeftWidth] = useState('0%'); // Start with half the screen width
   const [curtainRightWidth, setCurtainRightWidth] = useState('0%'); // Start with half the screen width
