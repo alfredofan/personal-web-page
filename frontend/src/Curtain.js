@@ -15,7 +15,9 @@ const styles = {
     width: '0%', // Start with half the screen width
     height: '110vh',
     backgroundColor: 'transparent',
-    transition: 'width 0.3s ease', // Animate width change    
+    // transition: 'width 0.3s ease', // Animate width change    
+    transition: 'transform 0.3s ease', // Change to transform for hardware acceleration - // Animate width change
+
   },
   curtainRight: {
     position: 'absolute',
@@ -24,7 +26,8 @@ const styles = {
     width: '0%', // Start with half the screen width
     height: '110vh',
     backgroundColor: 'transparent',
-    transition: 'width 0.3s ease', // Animate width change
+    transition: 'transform 0.3s ease', // Change to transform for hardware acceleration - // Animate width change
+
   },
 
   curtainTop: {
@@ -34,7 +37,7 @@ const styles = {
     width: '100%', // Start with half the screen width
     height: '55vh',
     backgroundColor: 'transparent',
-    transition: 'width 0.3s ease', // Animate width change
+    transition: 'transform 0.3s ease', // Change to transform for hardware acceleration - // Animate width change
   },
   curtainBottom: {
     position: 'absolute',     
@@ -43,7 +46,7 @@ const styles = {
     width: '100%', // Start with half the screen width
     height: '55vh',
     backgroundColor: 'transparent',
-    transition: 'width 0.3s ease', // Animate width change
+    transition: 'transform 0.3s ease', // Change to transform for hardware acceleration - // Animate width change
     marginTop: '55vh', // Half of the height (50%) to shift the bottom half into view
   },
 
