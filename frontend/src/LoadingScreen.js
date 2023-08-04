@@ -77,7 +77,7 @@ const LoadingScreenContainer = styled.div`
     align-items: center;
     height: 100vh!important;
     background-color: black;
-  }
+  
   `;
 
 
