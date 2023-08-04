@@ -113,7 +113,7 @@ const MobileCurtainsContainer = styled.div`
 const DesktopCurtainsContainer = styled.div`
   display: none; /* Hide the curtains on non-desktop devices */
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       display: flex; /* Show the curtains on desktop devices */
       height: 110vh;
   }
@@ -185,7 +185,7 @@ const CurtainEffect = () => {
   }, []);
 
   return (
-<div >
+<div>
 
 
 
@@ -326,9 +326,9 @@ const CurtainEffect = () => {
 
 function Curtain() {
   return (
-<div id="about">
-  <div style={styles.content}>  
-    <DesktopCurtainsContainer>
+<section id="about" style={{height:"110vh"}}>
+  <div style={styles.content} >  
+    <DesktopCurtainsContainer> 
         <LogoFadeOut />
     </DesktopCurtainsContainer>
 
@@ -344,7 +344,7 @@ function Curtain() {
 
     <CurtainEffect />
   </div>
-</div>
+</section>
   );
 }
 

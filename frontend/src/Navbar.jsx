@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
 
@@ -52,6 +52,23 @@ const Navbar = () => {
 
   window.addEventListener('scroll', changeNavbarColor);
 
+
+  //automatically close the overlay and sidebar screen is resize to width greater than 768px
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+      closeSidenav();
+      closeOverlay();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <Fragment>
       <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
@@ -88,7 +105,7 @@ const Navbar = () => {
 
         <Sidenav isOpen={isSidenavOpen}>
          
-            <SidenavLogo href="index.js">
+            <SidenavLogo href="/">
               {/* AFaustino */}
               </SidenavLogo>
             <MobileIcon onClick={closeSidenav}>
@@ -99,16 +116,16 @@ const Navbar = () => {
               </div>
             </MobileIcon>
 
-            <SidenavItem style={{ marginTop: '20px' }}>
+            <SidenavItem style={{ marginTop: '20px' }} onClick={closeOverlay, closeSidenav}>
             <SidenavLinks href="#about">About</SidenavLinks>
           </SidenavItem>
-          {/* <SidenavItem>
+          {/* <SidenavItem onClick={closeOverlay, closeSidenav}>
             <SidenavLinks href="#">Services</SidenavLinks>
           </SidenavItem>
-          <SidenavItem>
+          <SidenavItem onClick={closeOverlay, closeSidenav}>
             <SidenavLinks href="#">Events</SidenavLinks>
           </SidenavItem> */}
-          <SidenavItem>
+          <SidenavItem onClick={closeOverlay, closeSidenav}>
             <SidenavLinks href="#contact">Contact</SidenavLinks>
           </SidenavItem>
         </Sidenav>
