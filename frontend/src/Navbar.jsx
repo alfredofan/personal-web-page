@@ -57,7 +57,7 @@ const Navbar = () => {
       <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
         <NavContainer>
           <div>
-      <NavLogo href="index.js">
+      <NavLogo href="/">
           {/* AFaustino */}
       </NavLogo>
           </div>

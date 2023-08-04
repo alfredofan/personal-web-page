@@ -36,7 +36,7 @@ const Footer = () => {
     <FooterContainer>
     <FooterContainerCenter > 
 
-    <FooterLogo href='/index.js'/>
+    <FooterLogo href='/'/>
     </FooterContainerCenter>
 
     <GradientHR />
