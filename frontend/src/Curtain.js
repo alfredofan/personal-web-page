@@ -196,14 +196,14 @@ const CurtainEffect = () => {
     <div>
 
         {/* Left Curtain */}
-      <div style={{ ...styles.curtainLeft, width: curtainWideLeftWidth }} >
+        <div style={{ ...styles.curtainLeft, transform: `translate3d(-${curtainWideLeftWidth}, 0, 0)` }}>
         <div style={styles.content}>  
           <Photo />
         </div>
       </div>
 
         {/* Right Curtain */}
-      <div style={{ ...styles.curtainRight, width: curtainWideRightWidth }} >
+        <div style={{ ...styles.curtainRight, transform: `translate3d(${curtainWideRightWidth}, 0, 0)` }}>
         <div style={styles.content} >  
 
           <div style={{
@@ -239,14 +239,14 @@ const CurtainEffect = () => {
     <div>
       
         {/* Left Curtain */}
-      <div style={{ ...styles.curtainLeft, width: curtainLeftWidth }} >
+        <div style={{ ...styles.curtainLeft, transform: `translate3d(-${curtainLeftWidth}%, 0, 0)` }}>
         <div style={styles.content}>  
           <Photo />
         </div>
       </div>
 
         {/* Right Curtain */}
-      <div style={{ ...styles.curtainRight, width: curtainRightWidth }} >
+        <div style={{ ...styles.curtainRight, transform: `translate3d(${curtainRightWidth}%, 0, 0)` }}>
         <div style={styles.content} >  
           <div style={{
                     display: 'block',
@@ -280,7 +280,7 @@ const CurtainEffect = () => {
     <div>
 
         {/* Left Curtain */}
-      <div style={{ ...styles.curtainTop, width: curtainTopWidth }} >
+        <div style={{ ...styles.curtainTop, transform: `translate3d(0, -${curtainTopWidth}%, 0)` }}>
         <div style={styles.content}>  
           <Photo />
         </div>
@@ -288,7 +288,7 @@ const CurtainEffect = () => {
 
 
         {/* Right Curtain */}
-      <div style={{ ...styles.curtainBottom, width: curtainBottomWidth }} >
+        <div style={{ ...styles.curtainBottom, transform: `translate3d(0, ${curtainBottomWidth}%, 0)` }}>
         <div style={styles.content}>  
           <div style={{
             // position: 'absolute',
