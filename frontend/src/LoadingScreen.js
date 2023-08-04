@@ -4,11 +4,14 @@ import styled, { keyframes } from 'styled-components';
 import logo from './img/personal_logo_white.png';
 
 const fadeInOut = keyframes`
-  0%, 100% {
+  0% {
     opacity: 0;
   }
   50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 `;
 
