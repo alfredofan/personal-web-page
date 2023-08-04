@@ -13,7 +13,7 @@ const fadeInOut = keyframes`
 `;
 
 const Logo = styled.a`
-  display: flex;
+  display: flex;  
   align-self: center;
   justify-content: center;
   width: 106px;
@@ -28,7 +28,17 @@ const Logo = styled.a`
 //   background-color: white;
   animation: ${fadeInOut} 2s infinite;
   opacity: 0;
+
+
+  @media (min-width: 768px) {
+    margin-bottom: 25vh;
+}
+
+  @media (min-aspect-ratio: 21/10) { //used 21:10.5 instead of 21:9 because of different mobile browsers
+    margin-bottom: 10vh;
+}
 `;
+
 
 const LoadingScreenContainer = styled.div`
     display: flex;
@@ -46,6 +56,7 @@ const LoadingScreen = () => {
     <LoadingScreenContainer >
       {/* <div className="loader"></div> */}
       <Logo />
+
     </LoadingScreenContainer>
   );
 };
