@@ -138,7 +138,7 @@ const UltrawideCurtainsContainer = styled.div`
 `;
 
 
-// Effect for desktop curtains
+// Effect for curtains
 const CurtainEffect = () => {
   const [curtainLeftWidth, setCurtainLeftWidth] = useState('0%'); // Start with half the screen width
   const [curtainRightWidth, setCurtainRightWidth] = useState('0%'); // Start with half the screen width
