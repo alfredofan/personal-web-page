@@ -20,11 +20,11 @@ app.use(bodyParser.json());
 const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   // Replace the SMTP transport options with your email service credentials
-  host: 'smtp-mail.outlook.com', //  SMTP for Gmail: 'smtp.gmail.com'
+  host: 'SMTP', //  SMTP for Gmail: 'smtp.gmail.com'
   port: 587,
   secure: false,
   auth: {
-    user: 'alfredofaustino@outlook.com',
+    user: 'user@user.com',
     pass: 'password', //reserverd for password
   },
 });
@@ -41,8 +41,8 @@ const sendEmailNotification = async (formData) => {
     `;
 
     const mailOptions = {
-      from: 'alfredofaustino@outlook.com', // Replace with your email address
-      to: 'alfredofaustino@outlook.com', // Replace with your email address
+      from: 'user@user.com', // Replace with your email address
+      to: 'user@user.com', // Replace with your email address
       subject: 'New Contact Form Submission',
       text: emailContent,
     };

@@ -73,13 +73,13 @@
 
 }
 
-/* mobile vertical screen */
+/* mobile vertical screen
 @media (max-aspect-ratio: 9/16) {
 
 .parallax-caption .font-small {
   font-size: 10px!important;
 }
-}
+} */
 
 
 /* UltraWide and mobile widescreen */
