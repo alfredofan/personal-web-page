@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import logo from './img/personal_logo_white.png';
+// import logo from './img/personal_logo_white.png';
 import photo from './img/Photos/mono.jpg';
 import {LogoFadeOut, LogoFadeOutWide}  from './LogoFadeOut';
 
