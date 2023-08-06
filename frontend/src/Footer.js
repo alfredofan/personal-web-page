@@ -1,18 +1,5 @@
 import React from 'react';
 
-import {
-  Container,
-  SmallContainer,
-  MediumContainer,
-  LargeContainer,
-  FullContainer,
-  PageContainer,
-  PageSmallContainer,
-  PageMediumContainer,
-  PageLargeContainer,
-  PageFullContainer,
-} from './Containers';
-
 import { 
   FooterContainer, 
   FooterContainerAround, 

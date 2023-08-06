@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Video from './vid/_import_61557a2fa7fd98.46035599_preview.mp4';
-import VideoThumbnail from './img/carousel/Screenshot 2023-07-20 143511.png';
+import VideoThumbnail from './img/Screenshot 2023-07-20 143511.png';
 
 
 

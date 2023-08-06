@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { FaBars } from 'react-icons/fa';
-import styled from 'styled-components';
+// import { FaBars } from 'react-icons/fa';
+// import styled from 'styled-components';
 
 import {
   Nav,

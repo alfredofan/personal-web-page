@@ -1,12 +1,7 @@
 // App.js
 import React, { Fragment, useState, useEffect } from 'react';
 import Navbar from './Navbar';
-import VerticalCarousel from './VerticalCarousel';
-import CarouselFooter from './CarouselFooter';
-import { FullContainer } from './Containers';
 import ParallaxSection from './ParallaxSection';
-import Footer from './Footer';
-import Curtain from './Curtain';
 import LoadingScreen from './LoadingScreen'; // Import the LoadingScreen component
 import InstructionsModal from './InstructionsModal'; // Import the InstructionsModal component
 
