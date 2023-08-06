@@ -60,27 +60,27 @@ const styles = {
 };
 
 
- const Logo = styled.a`
- display: flex;
- align-self: center;
- justify-content: center;
- width: 106px;
- height: 43px;
- position: absolute;
- background: transparent;
- color: #fff;
- margin-bottom: 75% !important;
- // border-radius: 50%; //Roud effect
- // text-decoration: none;
- transition: background 0.3s ease;
- background-image: url(${logo});
- background-repeat: no-repeat;
- background-size: contain; 
+//  const Logo = styled.a`
+//  display: flex;
+//  align-self: center;
+//  justify-content: center;
+//  width: 106px;
+//  height: 43px;
+//  position: absolute;
+//  background: transparent;
+//  color: #fff;
+//  margin-bottom: 75% !important;
+//  // border-radius: 50%; //Roud effect
+//  // text-decoration: none;
+//  transition: background 0.3s ease;
+//  background-image: url(${logo});
+//  background-repeat: no-repeat;
+//  background-size: contain; 
 
- &:hover {
-   opacity: 0.5;
- }
-`;
+//  &:hover {
+//    opacity: 0.5;
+//  }
+// `;
 
 const Photo = styled.img`
 width: 100%;

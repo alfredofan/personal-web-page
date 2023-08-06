@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import logoBlack from './img/personal_logo_black.png';
+// import logoBlack from './img/personal_logo_black.png';
 import logoWhite from './img/personal_logo_white.png';
 
 
-const navLinksColor = '#000'; // Change the color value as needed
-const navLinksHoverColor = '#555555'; // Change the color value as needed
+// const navLinksColor = '#000'; // Change the color value as needed
+// const navLinksHoverColor = '#555555'; // Change the color value as needed
 
 const sidenavLinksColor = '#fff'; // Change the color value as needed
-const sidenavLinksHoverColor = '#808080'; // Change the color value as needed
+// const sidenavLinksHoverColor = '#808080'; // Change the color value as needed
 
 
 export const Nav = styled.nav`

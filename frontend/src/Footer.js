@@ -2,14 +2,14 @@ import React from 'react';
 
 import { 
   FooterContainer, 
-  FooterContainerAround, 
+  // FooterContainerAround, 
   FooterContainerCenter, 
   FooterContainerBetween, 
-  StickyFooterContainer, 
+  // StickyFooterContainer, 
   FooterLogo, 
   FooterNav, 
   FooterNavLink, 
-  SocialMediaContainer,
+  // SocialMediaContainer,
   LinkedinLink, 
   GitHubLink,
   EmailLink,  

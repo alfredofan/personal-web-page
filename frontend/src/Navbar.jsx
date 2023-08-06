@@ -11,7 +11,7 @@ import {
   NavMenu,
   MobileIcon,
   Sidenav,
-  SidenavContainer,
+  // SidenavContainer,
   SidenavLogo,
   SidenavItem,
   SidenavLinks,
@@ -54,20 +54,21 @@ const Navbar = () => {
 
 
   //automatically close the overlay and sidebar screen is resize to width greater than 768px
-  const handleResize = () => {
-    if (window.innerWidth > 768) {
-      closeSidenav();
-      closeOverlay();
-    }
-  };
-
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        closeSidenav();
+        closeOverlay();
+      }
+    };
+  
     window.addEventListener('resize', handleResize);
   
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  });
+  
 
   return (
     <Fragment>
@@ -116,7 +117,7 @@ const Navbar = () => {
               </div>
             </MobileIcon>
 
-            <SidenavItem style={{ marginTop: '20px' }} onClick={closeOverlay, closeSidenav}>
+            <SidenavItem style={{ marginTop: '20px' }} onClick={() => {closeOverlay(); closeSidenav();}}>
             <SidenavLinks href="#about">About</SidenavLinks>
           </SidenavItem>
           {/* <SidenavItem onClick={closeOverlay, closeSidenav}>
@@ -125,12 +126,12 @@ const Navbar = () => {
           <SidenavItem onClick={closeOverlay, closeSidenav}>
             <SidenavLinks href="#">Events</SidenavLinks>
           </SidenavItem> */}
-          <SidenavItem onClick={closeOverlay, closeSidenav}>
+          <SidenavItem onClick={() => {closeOverlay(); closeSidenav();}}>
             <SidenavLinks href="#contact">Contact</SidenavLinks>
           </SidenavItem>
         </Sidenav>
 
-      {isOverlayOpen && <Overlay onClick={closeOverlay, closeSidenav} />}
+      {isOverlayOpen && <Overlay onClick={() => {closeOverlay(); closeSidenav();}} />}
     </Fragment>
   );
 };

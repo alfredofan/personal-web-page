@@ -1,8 +1,7 @@
 // ParallaxSection.js
 
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
-import ReactDOM from "react-dom";
 
 import './index.css'; // CSS custom styling
 import './ParallaxSection.css'; // CSS custom styling
@@ -13,17 +12,9 @@ import VideoPlayer from './VideoPlayer';
 
 
 import {
-    Container,
-    SmallContainer,
-    MediumContainer,
-    LargeContainer,
+
     FullContainer,
-    StyledFullContainer,
-    PageContainer,
-    PageSmallContainer,
-    PageMediumContainer,
-    PageLargeContainer,
-    PageFullContainer,
+
   } from './Containers';
   
   import Footer from './Footer';
@@ -52,31 +43,8 @@ background-color: #000;
 
 z-index: -1 !important;
 
-
-
 `;
 
-const ParallaxCaption = styled.div`
-position:stick;
-max-width: 600px;
-margin-bottom: 200px;
-
-
-@media screen and (max-width: 1600px) {
-    max-width: 500px;
-  }
-
-@media screen and (max-width: 1200px) {
-    max-width: 400px;
-
-  }
-
-@media screen and (max-width: 1010px) {
-    max-width: 350px;
-
-  }
-
-`;
 
 const ContentContainer = styled.div`
   height: fit-content;
@@ -93,7 +61,7 @@ const ContentContainer = styled.div`
 
 
 const ParallaxSection = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [,setMousePosition] = useState({ x: 0, y: 0 });
 
   // image movement effect on hover
   const handleMouseMove = (e) => {
@@ -119,118 +87,24 @@ const ParallaxSection = () => {
 
   
   return (
-    <>
-      <ParallaxContainer  >
-
-    <div className="parallax-container" onMouseMove={handleMouseMove}>
-      
+<>
+  <ParallaxContainer  >
+    <div className="parallax-container" onMouseMove={handleMouseMove}>    
       <div className="parallax">
-
-      <VideoPlayer />
-      
-
-{/* <video id="myBanner" style={{
-  transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
-  marginBottom: '20px',
-  height:'110vh', minWidth:'105%', top:'-20', left: '-50' }} autoPlay loop muted playsInline>
-    <source src={Video} type="video/mp4"></source>
-    Your browser does not support HTML5 video.
-</video> */}
-
-
+        <VideoPlayer />
         <Header />
       </div>
     </div>
-
-
     </ParallaxContainer >
-
-<ContentContainer >
-
-
-
-{/* <MagicScroll  /> */}
-
-
-{/* <!-- Our Mission --> */}
-
-    <FullContainer style={{backgroundColor: '#333', maxHeight:'110vh', position:'relative', alignItems:'center', justifyContent:'center',}}>
-
-{/* <div className="" style={{ width: '100%', height: '100vh',backgroundColor: '#f1f1f1' }}> */}
-
-            <Curtain />
-
-    {/* </div> */}
-
-    </FullContainer>
-
-
-
-{/* <!-- Our Vision --> */}
-
-{/* 
-<PageFullContainer className="parallax-container" style={{backgroundColor: '#818181' }}>
-      <SmallContainer style={{justifyContent:'center', alignContent:'center'}}>
-        <h2 className="" style={{ fontSize: 'clamp(22px, 3vw, 45px)' }}>
-          Our Vision
-        </h2>
-        <br />
-        <p style={{ padding: 20, fontSize: 'clamp(15px, 2vw, 22px)', textAlign: 'justify' }}>
-          To promote recycling habits in every household and business organisation.
-        </p>
-        </SmallContainer>
-    </PageFullContainer>
-
-
-
-
-<PageFullContainer style={{backgroundColor: '#f1f1f1' }}>
-      <SmallContainer style={{justifyContent:'center', alignContent:'center'}}>
-          <h2 className="" style={{ fontSize: 'clamp(22px, 3vw, 45px)' }}>
-            Company Values
-          </h2>
-          <br />
-          <p style={{ padding: 20, fontSize: 'clamp(15px, 2vw, 22px)', textAlign: 'justify' }}>
-            <strong>• Commitment</strong>: to make reduce pollution.<br />
-            <br />
-            <strong>• Teamwork</strong>: to work collectively as a society to make the environment cleaner.<br />
-            <br />
-            <strong>• Responsibility</strong>: to make everyone understand how good and bad recycling habits affect the environment.
-          </p>
-      </SmallContainer>
-    </PageFullContainer> */}
-    
-    {/* <PageFullContainer style={{backgroundColor: '#fff' }} className="parallax-container" onMouseMove={handleMouseMove}>
-    </PageFullContainer> */}
-
-    {/* <PageFullContainer style={{backgroundColor: '#000' }}> previous color: #818181 */}
-      <Contact/>
-    {/* </PageFullContainer> */}
-
-
-{/* <!-- video --> */}
-
-{/* <FullContainer style={{backgroundColor: '#000' }}> */}
-
-  {/* <VideoPlayer /> */}
-
-{/* <video id="myBanner" style={{width:'100%', marginTop:'50px',}} controls autoplay loop muted playsinline>
-    <source src={Video} type="video/mp4"></source>
-    Your browser does not support HTML5 video.
-</video> */}
-
-
-{/* <!-- Company Values --> */}
-
-{/* </FullContainer> */}
-
-
-<FullContainer style={{backgroundColor: '#000',  color: '#000'}}>
-      <Footer style={{backgroundColor: '#000' }}/>
-</FullContainer>
-
-</ContentContainer>
-
+      <ContentContainer >
+        <FullContainer style={{backgroundColor: '#333', maxHeight:'110vh', position:'relative', alignItems:'center', justifyContent:'center',}}>
+          <Curtain />
+        </FullContainer>
+          <Contact/>
+        <FullContainer style={{backgroundColor: '#000',  color: '#000'}}>
+              <Footer style={{backgroundColor: '#000' }}/>
+        </FullContainer>
+      </ContentContainer>
 </>
 
   );
