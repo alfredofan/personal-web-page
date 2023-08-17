@@ -40,8 +40,8 @@ outline: none; /* Remove default focus outline */
 
 
 &:focus {
-  border-color: #333;
-  box-shadow: 0 0 5px #333; /*  box shadow to highlight the focused element */
+  border-color: #333 !important;
+  box-shadow: 0 0 5px #333 !important; /*  box shadow to highlight the focused element */
 }
 `;
 
@@ -57,8 +57,8 @@ outline: none; /* Remove default focus outline */
 
 
 &:focus {
-  border-color: #333;
-  box-shadow: 0 0 5px #333; /*  box shadow to highlight the focused element */
+  border-color: #333!important;
+  box-shadow: 0 0 5px #333!important; /*  box shadow to highlight the focused element */
 }
 `;
 
