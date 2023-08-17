@@ -3,10 +3,8 @@
 // Styled-components and other imports
 import React, { useState } from 'react';
 import axios from 'axios';
-import ReCAPTCHA from "react-google-recaptcha"; // Import reCAPTCHA v3
+import Recaptcha  from 'react-google-recaptcha';
 import styled from 'styled-components'; // Import styled-components library
-import './index.css'; // Import the custom CSS file for reCAPTCHA styling
-
 
 
 
@@ -77,9 +75,6 @@ const ContactForm = () => {
     message: '',
   };
 
-
-
-  
   const [formData, setFormData] = useState(initialFormState);
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -121,14 +116,8 @@ const ContactForm = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  // reCAPTCHA v2
-  // const handleCaptchaChange = (value) => {
-  //   setCaptchaToken(value);
-  // };
-
-  // reCAPTCHA v3
-  const handleCaptchaChange = (response) => {
-    setCaptchaToken(response);
+  const handleCaptchaChange = (value) => {
+    setCaptchaToken(value);
   };
 
   const handleSubmit = async (e) => {
@@ -181,13 +170,12 @@ const ContactForm = () => {
 
 
 
-
-      <ReCAPTCHA
-        sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY} // Use the correct environment variable key here
-        onChange={handleCaptchaChange}
+      <Recaptcha
+        size="normal"
+        id="recaptcha-google"
+        sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}  // Use the correct environment variable key here
+        onChange={handleCaptchaChange} 
       />
-
-
       <button type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Submitting...' : 'Submit'}
       </button>
