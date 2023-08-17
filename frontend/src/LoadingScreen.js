@@ -4,14 +4,11 @@ import styled, { keyframes } from 'styled-components';
 import logo from './img/personal_logo_white.png';
 
 const fadeInOut = keyframes`
-  0% {
+  0%, 100% {
     opacity: 0;
   }
   50% {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 `;
 
@@ -29,7 +26,7 @@ const Logo = styled.a`
   background-repeat: no-repeat;
   background-size: contain;
 //   background-color: white;
-  animation: ${fadeInOut} 2s infinite;
+  animation: ${fadeInOut} 2.1s infinite;
   opacity: 0;
 
   @media (max-width: 768px) {
