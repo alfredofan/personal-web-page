@@ -23,6 +23,8 @@ body{
 
 :root {
   --transition: all 1s;
+  color-scheme: dark; /* change scroll bar to dark */
+
 }
 
 
@@ -286,7 +288,7 @@ select:-webkit-autofill:focus {
 
 
 
- 
+
 /* 
 ===============================
             Recaptcha
