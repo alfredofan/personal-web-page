@@ -1,9 +1,11 @@
+#netlify.toml
 [build]
   base = "frontend"
   command = "npm run build"
   publish = "build"
+  environment = { NODE_VERSION = "14.15.3", REACT_APP_RECAPTCHA_SITEKEY = "6Lfyg7EnAAAAANEFgfSJkMBffDcEfw8S6R3z_THc", REACT_APP_RECAPTCHA_SECRET_KEY = "6Lfyg7EnAAAAABg7g9fJX7_-kyjNTB3PDmJe7hA_" }
 
 [context.production]
   publish = "output/"
   command = "make publish"
-  environment = { NODE_VERSION = "14.15.3", REACT_APP_RECAPTCHA_SITEKEY = "6LdOyW8nAAAAANOttt8BDu--N5t_egosjAoanPe0" }
+  environment = { NODE_VERSION = "14.15.3", REACT_APP_RECAPTCHA_SITEKEY = "6Lfyg7EnAAAAANEFgfSJkMBffDcEfw8S6R3z_THc", REACT_APP_RECAPTCHA_SECRET_KEY = "6Lfyg7EnAAAAABg7g9fJX7_-kyjNTB3PDmJe7hA_" }

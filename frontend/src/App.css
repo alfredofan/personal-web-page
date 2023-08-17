@@ -58,3 +58,10 @@ h1 {
 ============================
 */
 
+#recaptcha-google {
+  background-color: black !important;
+  
+  /* Set the text color to white for better visibility */
+  color: white !important;
+
+}

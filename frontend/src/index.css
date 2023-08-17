@@ -54,6 +54,7 @@ body{
 
 
 
+
 /* 
 ==============================
     Text Highlight Color
@@ -267,6 +268,27 @@ border-width: 1px !important;
 }
 
 
+/* 
+===============================
+            Recaptcha
+===============================
+*/
+
+
+/* Style the reCAPTCHA widget */
+.g-recaptcha {
+  transform: scale(0.77); /* Adjust the size as needed */
+}
+
+/* Change the background color */
+.g-recaptcha iframe {
+  background-color: black !important;
+}
+
+/* Adjust the widget border color */
+.g-recaptcha iframe {
+  border-color: black !important;
+}
 
 
 
