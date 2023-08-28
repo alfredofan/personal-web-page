@@ -84,10 +84,9 @@ const InstructionsTooltip = ({ onClose }) => {
       <TooltipOverlay show={showTooltip} onClick={handleClose}>
         <TooltipContent show={showTooltip}>
             <p className='font-medium'>
-                1. Look for the header and click just behind it to play the video.<br/>
-                2. To pause the video, just click back.<br/>
-                3. Move your mouse around to interact with the image.<br/>
-                4. Have fun and enjoy the show! 🎉📽️😄
+                1. To pause the video, just click on it.<br/>
+                2. Move your mouse around to interact with the image/video.<br/>
+                3. Have fun and enjoy the show! 🎉📽️😄
             </p>
           </TooltipContent>
         </TooltipOverlay>

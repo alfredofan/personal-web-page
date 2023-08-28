@@ -77,7 +77,7 @@ const VideoPlayer = () => {
     
         transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
     }}
-        autoPlay={false}
+        autoPlay={true}
         loop
         muted
         playsInline
