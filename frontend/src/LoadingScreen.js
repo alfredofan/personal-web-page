@@ -12,7 +12,7 @@ const fadeInOut = keyframes`
   }
 `;
 
-const Logo = styled.a`
+const Logo = styled.div`
   display: flex;
   align-self: center;
   justify-content: center;
@@ -54,7 +54,7 @@ const LoadingScreen = () => {
   return (
     <LoadingScreenContainer >
       {/* <div className="loader"></div> */}
-      <Logo aria-label="af Logo"/>
+      <Logo role="img" aria-label="af Logo" />
     </LoadingScreenContainer>
   );
 };
