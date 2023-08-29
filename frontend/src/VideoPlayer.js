@@ -86,6 +86,8 @@ const VideoPlayer = () => {
       >
         <source src={Video} type="video/mp4" />
         Your browser does not support HTML5 video.
+        <track src="" kind="captions" srclang="en" label="english_captions"/>
+
       </video>
       {!isPlaying 
 

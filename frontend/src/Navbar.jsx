@@ -75,7 +75,7 @@ const Navbar = () => {
       <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
         <NavContainer>
           <div>
-      <NavLogo href="/">
+      <NavLogo href="/" aria-label="af Logo">
           {/* AFaustino */}
       </NavLogo>
           </div>
@@ -106,7 +106,7 @@ const Navbar = () => {
 
         <Sidenav isOpen={isSidenavOpen}>
          
-            <SidenavLogo href="/">
+            <SidenavLogo href="/" aria-label="af Logo">
               {/* AFaustino */}
               </SidenavLogo>
             <MobileIcon onClick={closeSidenav}>

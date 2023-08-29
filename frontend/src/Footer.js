@@ -23,7 +23,7 @@ const Footer = () => {
     <FooterContainer>
     <FooterContainerCenter > 
 
-    <FooterLogo href='/'/>
+    <FooterLogo href='/' aria-label="af Logo"/>
     </FooterContainerCenter>
 
     <GradientHR />
@@ -51,10 +51,10 @@ const Footer = () => {
       
       <div>
         
-      <LinkedinLink href="https://au.linkedin.com/in/alfredo-faustino-44034a70?trk=public_profile_samename-profile">
+      <LinkedinLink href="https://au.linkedin.com/in/alfredo-faustino-44034a70?trk=public_profile_samename-profile" aria-label="LinkedIn Logo">
         </LinkedinLink>
 
-        <GitHubLink href="https://github.com/alfredofan/">
+        <GitHubLink href="https://github.com/alfredofan/" aria-label="GitHub Logo">
         </GitHubLink>
 
         <EmailLink>
