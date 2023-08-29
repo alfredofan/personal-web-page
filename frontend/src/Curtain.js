@@ -82,7 +82,7 @@ const styles = {
 //  }
 // `;
 
-const Photo = styled.img`
+const Photo = styled.div`
 width: 100%;
 height: 110vh;
 // border-radius: 50%;
@@ -195,7 +195,7 @@ const CurtainEffect = () => {
         {/* Left Curtain */}
       <div style={{ ...styles.curtainLeft, width: curtainWideLeftWidth }} >
         <div style={styles.content}>  
-          <Photo />
+        <Photo role="img" aria-label="Alfredo in Salvador, Bahia, Brazil"/>
         </div>
       </div>
 
@@ -238,7 +238,7 @@ const CurtainEffect = () => {
         {/* Left Curtain */}
       <div style={{ ...styles.curtainLeft, width: curtainLeftWidth }} >
         <div style={styles.content}>  
-          <Photo />
+        <Photo role="img" aria-label="Alfredo in Salvador, Bahia, Brazil"/>
         </div>
       </div>
 
@@ -279,7 +279,7 @@ const CurtainEffect = () => {
         {/* Left Curtain */}
       <div style={{ ...styles.curtainTop, width: curtainTopWidth }} >
         <div style={styles.content}>  
-          <Photo />
+        <Photo role="img" aria-label="Alfredo in Salvador, Bahia, Brazil"/>
         </div>
       </div>
 
