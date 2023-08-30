@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import logo from './img/personal_logo_white.png';
 
-const Logo = styled.a`
+const Logo = styled.div`
 display: flex;
 align-self: center;
 justify-content: center;

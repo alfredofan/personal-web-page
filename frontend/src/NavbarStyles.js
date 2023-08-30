@@ -105,7 +105,7 @@ export const MobileIcon = styled.div` // Hamburger menu
   }
 `;
 
-export const NavMenu = styled.ul`
+export const NavMenu = styled.menu`
   display: flex;
   align-items: center;
   list-style: none;
@@ -209,7 +209,7 @@ export const OpenButton = styled.button`
 `;
 
 
-export const SidenavContainer = styled.ul`
+export const SidenavContainer = styled.menu`
   display: flex;
   justify-self: center;
   align-self: center;

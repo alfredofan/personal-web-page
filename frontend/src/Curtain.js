@@ -329,15 +329,15 @@ function Curtain() {
 <section id="about" style={{height:"110vh"}}>
   <div style={styles.content} >  
     <DesktopCurtainsContainer> 
-        <LogoFadeOut />
+        <LogoFadeOut role="img" aria-label="af Logo"/>
     </DesktopCurtainsContainer>
 
     <UltrawideCurtainsContainer>
-        <LogoFadeOutWide />
+        <LogoFadeOutWide role="img" aria-label="af Logo"/>
     </UltrawideCurtainsContainer>
 
     <MobileCurtainsContainer>
-        <LogoFadeOut />
+        <LogoFadeOut role="img" aria-label="af Logo"/>
     </MobileCurtainsContainer>
 
       {/* <h1>Scroll up or down to see the curtain effect!</h1> */}

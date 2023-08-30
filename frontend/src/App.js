@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import ParallaxSection from './ParallaxSection';
 import LoadingScreen from './LoadingScreen'; // Import the LoadingScreen component
 import InstructionsModal from './InstructionsModal'; // Import the InstructionsModal component
+import { Helmet } from 'react-helmet';
+
 
 
 function App() {
@@ -38,6 +40,9 @@ function App() {
         <LoadingScreen />
       ) : (
         <Fragment>
+        <Helmet>
+          <meta name="af" content="Alfredo's personal web site created using create-react-app. React.js, JavaScript, CSS, HTML, and love &#128522" />
+        </Helmet>
         <Navbar />
         {/* <VerticalCarousel /> */}
         {/* <FullContainer>

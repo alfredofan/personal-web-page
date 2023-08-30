@@ -54,7 +54,7 @@ const LoadingScreen = () => {
   return (
     <LoadingScreenContainer >
       {/* <div className="loader"></div> */}
-      <Logo aria-label="af Logo" />
+      <Logo role="img" aria-label="af Logo" />
     </LoadingScreenContainer>
   );
 };
