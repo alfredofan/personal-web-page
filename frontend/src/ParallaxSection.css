@@ -92,6 +92,16 @@
 
 }
 
+/* widescreen */
+@media (min-aspect-ratio: 16/9) {
+  .parallax-caption {
+    margin-bottom: 10.5vh !important; 
+    margin-top: 0px !important;  
+    max-width: 70%;
+    padding-right: 0px !important;
+  }
+}
+
 
   /* .parallax-caption .font-xx-large {
     font-size: clamp(36px, 7vw, 70px)!important;

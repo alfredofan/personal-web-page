@@ -221,9 +221,9 @@ const CurtainEffect = () => {
             </h2> <br></br> */}
 
             <p className='font-small'>
-              Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
-              and interactive websites for you. I specialize in creating first-rate frontend and 
-              backend solutions. Let's team up and turn your web development vision into reality!
+              Hi there! I'm Alfredo, a passionate Web Developer ready to craft dynamic 
+              and interactive websites for you. I specialize in creating first-rate front-end 
+              solutions. Let's team up and turn your web development vision into reality!
             </p>
           </div>
         </div>
@@ -262,9 +262,9 @@ const CurtainEffect = () => {
               </h2> <br></br> */}
 
               <p className='font-small'>
-              Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
-              and interactive websites for you. I specialize in creating first-rate frontend and 
-              backend solutions. Let's team up and turn your web development vision into reality!
+                Hi there! I'm Alfredo, a passionate Web Developer ready to craft dynamic 
+                and interactive websites for you. I specialize in creating first-rate front-end 
+                solutions. Let's team up and turn your web development vision into reality!
               </p>
           </div>
         </div>
@@ -310,9 +310,9 @@ const CurtainEffect = () => {
             </h2> <br/><br/> */}
 
             <p className='font-small'>
-            Hi there! I'm Alfredo, a passionate full stack developer ready to craft dynamic 
-            and interactive websites for you. I specialize in creating first-rate frontend and 
-            backend solutions. Let's team up and turn your web development vision into reality!
+              Hi there! I'm Alfredo, a passionate Web Developer ready to craft dynamic 
+              and interactive websites for you. I specialize in creating first-rate front-end 
+              solutions. Let's team up and turn your web development vision into reality!
             </p>
           </div>
         </div>
